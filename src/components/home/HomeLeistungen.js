@@ -1,97 +1,108 @@
+"use client";
+
+import { motion } from "motion/react";
+import DepthCard from "@/src/components/react-bits/depth-card";
+
 const leistungen = [
   {
     title: "Entrümpelung von Wohnungen",
     description:
-      "Keller, Dachboden, Garage oder ganze Wohnung – wir räumen schnell, gründlich und zu fairen Preisen. Inklusive fachgerechter Entsorgung.",
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8} className="w-7 h-7">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-      </svg>
-    ),
+      "Keller, Dachboden, Garage oder ganze Wohnung – schnell, gründlich und zu fairen Preisen. Inklusive fachgerechter Entsorgung.",
+    image:
+      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&q=85",
   },
   {
     title: "Entrümpelung + Sanierung",
     description:
-      "Nach der Entrümpelung direkt weiter: Wir übernehmen auch Reinigung, Bodenbeläge und kleinere Sanierungsarbeiten – alles aus einer Hand.",
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8} className="w-7 h-7">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z" />
-      </svg>
-    ),
+      "Räumen und direkt sanieren – Bodenbeläge, Reinigung und kleine Renovierungsarbeiten aus einer Hand.",
+    image:
+      "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=900&q=85",
   },
   {
     title: "Haushaltsauflösung",
     description:
-      "Einfühlsam und diskret – ob nach einem Todesfall oder Umzug. Wir übernehmen die komplette Auflösung inkl. Wertanrechnung verwertbarer Gegenstände.",
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8} className="w-7 h-7">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
-      </svg>
-    ),
+      "Einfühlsam und diskret – auch nach Todesfall. Inkl. Wertanrechnung verwertbarer Gegenstände.",
+    image:
+      "https://images.unsplash.com/photo-1484154218962-a197022b5858?w=900&q=85",
   },
 ];
 
-export default function HomeLeistungen({
-  eyebrow = "Unsere Leistungen",
-  headline = "Was wir für Sie tun",
-}) {
+export default function HomeLeistungen() {
   return (
     <section
-      className="w-full py-20 px-4 sm:px-6 lg:px-8"
-      style={{ background: "#ebe5da" }}
-      id="leistungen">
+      id="leistungen"
+      className="w-full py-24 px-4 sm:px-6 lg:px-8"
+      style={{ background: "#111318" }}>
       <div className="max-w-[1400px] mx-auto">
 
         {/* Header */}
-        <div className="mb-12 flex flex-col gap-3">
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="mb-14 flex flex-col gap-3">
           <span
-            className="text-[13px] font-semibold uppercase tracking-[.16em]"
-            style={{ color: "#ee6a2c", fontFamily: "'IBM Plex Sans', system-ui, sans-serif" }}>
-            {eyebrow}
+            style={{
+              color: "#ee6a2c",
+              fontFamily: "'IBM Plex Sans', system-ui, sans-serif",
+              fontSize: 13,
+              fontWeight: 600,
+              letterSpacing: ".16em",
+              textTransform: "uppercase",
+            }}>
+            Unsere Leistungen
           </span>
           <h2
-            className="text-4xl sm:text-5xl font-black"
             style={{
               fontFamily: "'Archivo', system-ui, sans-serif",
+              fontWeight: 900,
+              fontSize: "clamp(2.2rem, 5vw, 4rem)",
               letterSpacing: "-0.02em",
               lineHeight: 1.04,
-              color: "#1b1f26",
+              color: "#f3f1ec",
             }}>
-            {headline}
+            Was wir für Sie tun
           </h2>
-        </div>
+          <p
+            style={{
+              fontFamily: "'IBM Plex Sans', system-ui, sans-serif",
+              fontSize: 17,
+              lineHeight: 1.6,
+              color: "rgba(243,241,236,0.55)",
+              maxWidth: 480,
+              marginTop: 4,
+            }}>
+            Hover über die Karten für mehr Details.
+          </p>
+        </motion.div>
 
-        {/* Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {leistungen.map((item) => (
-            <div
+        {/* Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 justify-items-center">
+          {leistungen.map((item, index) => (
+            <motion.div
               key={item.title}
-              className="flex flex-col gap-4 p-6 rounded-lg"
-              style={{
-                background: "#ffffff",
-                borderLeft: "4px solid #ee6a2c",
-                boxShadow: "0 2px 12px rgba(0,0,0,0.06)",
+              initial={{ opacity: 0, y: 48 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-80px" }}
+              transition={{
+                duration: 0.55,
+                delay: index * 0.15,
+                ease: [0.4, 0, 0.2, 1],
               }}>
-              <div style={{ color: "#ee6a2c" }}>{item.icon}</div>
-              <h3
-                className="text-xl font-bold"
-                style={{
-                  fontFamily: "'Archivo', system-ui, sans-serif",
-                  letterSpacing: "-0.02em",
-                  color: "#1b1f26",
-                }}>
-                {item.title}
-              </h3>
-              <p
-                className="text-base"
-                style={{
-                  fontFamily: "'IBM Plex Sans', system-ui, sans-serif",
-                  lineHeight: 1.6,
-                  color: "#3a414c",
-                }}>
-                {item.description}
-              </p>
-            </div>
+              <DepthCard
+                title={item.title}
+                description={item.description}
+                image={item.image}
+                width={400}
+                height={500}
+                maxRotation={10}
+                maxTranslation={10}
+                borderRadius="8px"
+                spotlightColor="rgba(238,106,44,0.22)"
+                disableOnMobile
+              />
+            </motion.div>
           ))}
         </div>
 

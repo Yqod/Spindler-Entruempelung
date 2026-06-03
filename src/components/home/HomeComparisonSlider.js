@@ -1,16 +1,16 @@
 import ComparisonSlider from "@/src/components/react-bits/comparison-slider";
 
 export default function HomeComparisonSlider({
-  beforeImage = "https://images.unsplash.com/photo-1530555554800-fd2a6cc30d97?w=1400&q=85",
-  afterImage = "https://images.unsplash.com/photo-1631679706909-1844bbd07221?w=1400&q=85",
+  beforeImage = "/comparisonPictures/messiwohnung-vorher.webp",
+  afterImage = "/comparisonPictures/messiwohnung-nachher.webp",
   eyebrow = "Vorher & Nachher",
-  headline = "Der Unterschied spricht\nfür sich",
+  headline = "Schnell. Zuverlässig. Diskret",
   subtext = "Wir entrümpeln Keller, Dachböden und Wohnungen – sauber, schnell und zuverlässig.",
 }) {
   return (
     <section
       className="w-full py-20 px-4 sm:px-6 lg:px-8"
-      style={{ background: "#f5f2ec" }}>
+      style={{ background: "#1d2128" }}>
       <div className="max-w-[1400px] mx-auto">
 
         {/* Header */}
@@ -26,14 +26,14 @@ export default function HomeComparisonSlider({
               fontFamily: "'Archivo', system-ui, sans-serif",
               letterSpacing: "-0.02em",
               lineHeight: 1.04,
-              color: "#1b1f26",
+              color: "#f3f1ec",
             }}>
             {headline}
           </h2>
           <p
             className="max-w-md text-base mt-1"
             style={{
-              color: "#3a414c",
+              color: "rgba(243,241,236,0.6)",
               fontFamily: "'IBM Plex Sans', system-ui, sans-serif",
               lineHeight: 1.6,
             }}>
@@ -46,7 +46,7 @@ export default function HomeComparisonSlider({
           className="w-full rounded-lg overflow-hidden"
           style={{
             aspectRatio: "16/9",
-            border: "1px solid #e2dcd1",
+            border: "1px solid rgba(255,255,255,0.08)",
             boxShadow: "0 4px 24px rgba(0,0,0,0.08)",
           }}>
           <ComparisonSlider

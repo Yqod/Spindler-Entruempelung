@@ -12,7 +12,7 @@ export default function HomeModelScatter() {
     <section
       id="house-section"
       className="relative w-full"
-      style={{ height: "220vh", background: "#171a20" }}>
+      style={{ height: "220vh", background: "#1d2128" }}>
 
       {/* Sticky viewport — Canvas + Text bleiben während dem Scrollen stehen */}
       <div className="sticky top-0 w-full h-screen overflow-hidden">
@@ -32,7 +32,7 @@ export default function HomeModelScatter() {
               marginBottom: 16,
               display: "block",
             }}>
-            Scroll um zu sehen
+            Schnell und Zuverlässig
           </span>
           <h2
             style={{
@@ -53,7 +53,7 @@ export default function HomeModelScatter() {
             color: "rgba(243,241,236,0.68)",
             maxWidth: 320,
           }}>
-            Jedes Teil hat seinen Platz — wir sorgen dafür, dass er wieder frei wird.
+            Ob Keller, Dachboden oder ganze Wohnung – wir entrümpeln schnell, sauber und zuverlässig.
           </p>
         </div>
 
