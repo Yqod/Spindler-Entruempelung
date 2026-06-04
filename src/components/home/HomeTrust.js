@@ -58,6 +58,7 @@ function Counter({ to, suffix = "", duration = 2 }) {
 export default function HomeTrust() {
   return (
     <section
+      id="vertrauen"
       className="w-full py-16 sm:py-24 px-4 sm:px-6 lg:px-8"
       style={{ background: "#111318" }}>
       <div className="max-w-[1400px] mx-auto flex flex-col gap-16 items-center text-center">
@@ -131,7 +132,43 @@ export default function HomeTrust() {
           ))}
         </div>
 
-        {/* Divider */}
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="w-full overflow-hidden rounded-lg relative"
+          style={{
+            height: "clamp(220px, 35vw, 480px)",
+            border: "1px solid rgba(255,255,255,0.07)",
+          }}>
+          <svg
+            className="absolute inset-0 w-full h-full"
+            xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <pattern id="stripes" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+                <rect width="6" height="12" fill="#1d2128" />
+                <rect x="6" width="6" height="12" fill="#242932" />
+              </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#stripes)" />
+            <text
+              x="50%" y="50%"
+              dominantBaseline="middle" textAnchor="middle"
+              fill="rgba(243,241,236,0.18)"
+              fontFamily="'IBM Plex Mono', monospace"
+              fontSize="13"
+              letterSpacing="0.12em">
+              FIRMENBILD · /firma.jpg
+            </text>
+          </svg>
+          <img
+            src="/firma.jpg"
+            alt="Spindler Entrümpelung – Team"
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+        </motion.div>
+
         <div style={{ height: 1, background: "rgba(255,255,255,0.07)" }} />
 
         {/* USPs */}
@@ -156,7 +193,7 @@ export default function HomeTrust() {
                   fontFamily: "'IBM Plex Sans', system-ui, sans-serif",
                   fontSize: 15,
                   fontWeight: 500,
-                  color: "rgba(243,241,236,0.85)",
+                  color: "#f3f1ec",
                 }}>
                 {usp.text}
               </span>

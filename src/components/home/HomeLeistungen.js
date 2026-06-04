@@ -2,23 +2,27 @@
 
 import { useState, useRef, useEffect } from "react";
 import { motion } from "motion/react";
+import Link from "next/link";
 import DepthCard from "@/src/components/react-bits/depth-card";
 
 const leistungen = [
   {
-    title: "Entrümpelung von Wohnungen",
+    title: "Entrümpelung",
     description: "Keller, Dachboden, Garage oder ganze Wohnung – schnell, gründlich und zu fairen Preisen. Inklusive fachgerechter Entsorgung.",
     image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&q=85",
+    href: "/entruempelung",
   },
   {
-    title: "Entrümpelung + Sanierung",
+    title: "Sanierung",
     description: "Räumen und direkt sanieren – Bodenbeläge, Reinigung und kleine Renovierungsarbeiten aus einer Hand.",
     image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=900&q=85",
+    href: "/sanierung",
   },
   {
     title: "Haushaltsauflösung",
     description: "Einfühlsam und diskret – auch nach Todesfall. Inkl. Wertanrechnung verwertbarer Gegenstände.",
     image: "https://images.unsplash.com/photo-1484154218962-a197022b5858?w=900&q=85",
+    href: "/haushaltsaufloesung",
   },
 ];
 
@@ -44,18 +48,20 @@ function ResponsiveCard({ item, index }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-80px" }}
       transition={{ duration: 0.55, delay: index * 0.15, ease: [0.4, 0, 0.2, 1] }}>
-      <DepthCard
-        title={item.title}
-        description={item.description}
-        image={item.image}
-        width={cardWidth}
-        height={Math.round(cardWidth * 1.25)}
-        maxRotation={10}
-        maxTranslation={10}
-        borderRadius="8px"
-        spotlightColor="rgba(238,106,44,0.22)"
-        disableOnMobile
-      />
+      <Link href={item.href}>
+        <DepthCard
+          title={item.title}
+          description={item.description}
+          image={item.image}
+          width={cardWidth}
+          height={Math.round(cardWidth * 1.25)}
+          maxRotation={10}
+          maxTranslation={10}
+          borderRadius="8px"
+          spotlightColor="rgba(238,106,44,0.22)"
+          disableOnMobile
+        />
+      </Link>
     </motion.div>
   );
 }
