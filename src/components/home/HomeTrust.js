@@ -58,9 +58,35 @@ function Counter({ to, suffix = "", duration = 2 }) {
 export default function HomeTrust() {
   return (
     <section
-      className="w-full py-24 px-4 sm:px-6 lg:px-8"
+      className="w-full py-16 sm:py-24 px-4 sm:px-6 lg:px-8"
       style={{ background: "#111318" }}>
       <div className="max-w-[1400px] mx-auto flex flex-col gap-16 items-center text-center">
+
+        {/* Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="flex flex-col items-center gap-3">
+          <span style={{
+            color: "#ee6a2c",
+            fontFamily: "'IBM Plex Sans', system-ui, sans-serif",
+            fontSize: 13, fontWeight: 600,
+            letterSpacing: ".16em", textTransform: "uppercase",
+          }}>
+            Vertrauen & Qualität
+          </span>
+          <h2 style={{
+            fontFamily: "'Archivo', system-ui, sans-serif",
+            fontWeight: 900,
+            fontSize: "clamp(2.2rem, 5vw, 4rem)",
+            letterSpacing: "-0.02em", lineHeight: 1.04,
+            color: "#f3f1ec",
+          }}>
+            Zahlen die für uns sprechen
+          </h2>
+        </motion.div>
 
         {/* Stats */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-10 sm:gap-16 w-full">

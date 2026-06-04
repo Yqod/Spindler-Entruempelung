@@ -115,7 +115,7 @@ export default function HomeProzess() {
 
   return (
     <section
-      className="w-full py-24 px-4 sm:px-6 lg:px-8"
+      className="w-full py-16 sm:py-24 px-4 sm:px-6 lg:px-8"
       style={{ background: "#111318" }}
       id="prozess">
       <div className="max-w-[1400px] mx-auto flex flex-col gap-16">

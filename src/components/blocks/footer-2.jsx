@@ -49,7 +49,7 @@ export default function Footer2({
 
           {/* Kurven-Ecken */}
           <div className="absolute left-0 top-0 z-10 -translate-y-full">
-            <svg width="614" height="153" viewBox="0 0 614 153" fill="none" className="h-auto w-[250px] relative top-px">
+            <svg width="614" height="153" viewBox="0 0 614 153" fill="none" className="h-auto w-[140px] sm:w-[200px] md:w-[250px] relative top-px">
               <path d="M0 0H451.601C467.78 0 483.071 7.75893 491.954 21.2815C558.518 122.612 538.359 153.074 614 153H0V0Z" fill="#111318" />
             </svg>
           </div>
@@ -59,7 +59,7 @@ export default function Footer2({
             </svg>
           </div>
 
-          <div className="mx-auto w-full max-w-[1400px] px-4 lg:px-8 py-12">
+          <div className="mx-auto w-full max-w-[1400px] px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
             <motion.div
               initial="hidden"
               whileInView="visible"
