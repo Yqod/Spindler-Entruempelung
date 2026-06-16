@@ -9,21 +9,22 @@ const leistungen = [
   {
     title: "Entrümpelung",
     description: "Keller, Dachboden, Garage oder ganze Wohnung – schnell, gründlich und zu fairen Preisen. Inklusive fachgerechter Entsorgung.",
-    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&q=85",
+    image: "/pictures/leistung_entruempelung.webp",
     href: "/entruempelung",
   },
   {
     title: "Sanierung",
     description: "Räumen und direkt sanieren – Bodenbeläge, Reinigung und kleine Renovierungsarbeiten aus einer Hand.",
-    image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=900&q=85",
+    image: "/pictures/leistung_sanierung_neu.png",
     href: "/sanierung",
   },
   {
     title: "Haushaltsauflösung",
     description: "Einfühlsam und diskret – auch nach Todesfall. Inkl. Wertanrechnung verwertbarer Gegenstände.",
-    image: "https://images.unsplash.com/photo-1484154218962-a197022b5858?w=900&q=85",
+    image: "/pictures/leistung_haushaltsaufloesung.webp",
     href: "/haushaltsaufloesung",
   },
+  
 ];
 
 function ResponsiveCard({ item, index }) {

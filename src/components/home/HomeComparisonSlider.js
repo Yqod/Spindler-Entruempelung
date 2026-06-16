@@ -4,8 +4,8 @@ import { motion } from "motion/react";
 import ComparisonSlider from "@/src/components/react-bits/comparison-slider";
 
 export default function HomeComparisonSlider({
-  beforeImage = "/comparisonPictures/messiwohnung-vorher.webp",
-  afterImage = "/comparisonPictures/messiwohnung-nachher.webp",
+  beforeImage = "/comparisonPictures/altbau_vermüllt.webp",
+  afterImage = "/comparisonPictures/altbau_neu.webp",
   eyebrow = "Vorher & Nachher",
   headline = "Schnell. Zuverlässig. Diskret.",
   subtext = "Sehen Sie selbst – wir hinterlassen keine Spuren außer einer sauberen, leeren Fläche.",

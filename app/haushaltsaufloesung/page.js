@@ -2,7 +2,7 @@ import HaushaltsauflösungHero from "@/src/components/haushaltsaufloesung/Hausha
 import HaushaltsauflösungLeistungen from "@/src/components/haushaltsaufloesung/HaushaltsauflösungLeistungen.js";
 import HaushaltsauflösungVersprechen from "@/src/components/haushaltsaufloesung/HaushaltsauflösungVersprechen.js";
 import HomeKontakt from "@/src/components/home/HomeKontakt.js";
-import Footer2 from "@/src/components/blocks/footer-2.jsx";
+import Footer7 from "@/src/components/blocks/footer-7.jsx";
 
 export const metadata = {
   title: "Haushaltsauflösung – Spindler Entrümpelung Altmark",
@@ -16,7 +16,7 @@ export default function HaushaltsauflösungPage() {
       <HaushaltsauflösungLeistungen />
       <HaushaltsauflösungVersprechen />
       <HomeKontakt />
-      <Footer2 />
+      <Footer7 />
     </main>
   );
 }

@@ -2,7 +2,7 @@ import EntruempelungHero from "@/src/components/entruempelung/EntruempelungHero.
 import EntruempelungServices from "@/src/components/entruempelung/EntruempelungServices.js";
 import EntruempelungVersprechen from "@/src/components/entruempelung/EntruempelungVersprechen.js";
 import HomeKontakt from "@/src/components/home/HomeKontakt.js";
-import Footer2 from "@/src/components/blocks/footer-2.jsx";
+import Footer7 from "@/src/components/blocks/footer-7.jsx";
 
 export const metadata = {
   title: "Entrümpelung – Spindler Entrümpelung Altmark",
@@ -16,7 +16,7 @@ export default function EntruempelungPage() {
       <EntruempelungServices />
       <EntruempelungVersprechen />
       <HomeKontakt />
-      <Footer2 />
+      <Footer7 />
     </main>
   );
 }

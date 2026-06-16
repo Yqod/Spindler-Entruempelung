@@ -22,7 +22,7 @@ export default function EntruempelungHero() {
         className="absolute inset-0 w-full h-full object-cover"
         poster="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920&q=80">
         <source
-          src="https://videos.pexels.com/video-files/1409899/1409899-uhd_2560_1440_25fps.mp4"
+          src="/comparisonPictures/Furniture_and_trash_disappear_202606141640.mp4"
           type="video/mp4"
         />
       </video>
@@ -85,17 +85,7 @@ export default function EntruempelungHero() {
               style={{ ...orangeBtn, fontFamily: "'Archivo', system-ui, sans-serif", fontSize: 16 }}>
               Kostenlos anfragen
             </a>
-            <a
-              href="#leistungen"
-              className="flex items-center justify-center gap-2 px-7 py-4 rounded-xl font-bold transition-all hover:-translate-y-0.5"
-              style={{
-                fontFamily: "'Archivo', system-ui, sans-serif", fontSize: 16,
-                background: "rgba(255,255,255,0.06)",
-                border: "1px solid rgba(255,255,255,0.14)",
-                color: "#f3f1ec",
-              }}>
-              Alle Leistungen
-            </a>
+            
           </motion.div>
 
         </div>

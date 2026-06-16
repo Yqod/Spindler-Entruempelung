@@ -5,7 +5,7 @@ import HomeProzess from "@/src/components/home/HomeProzess.js";
 import HomeFeature from "@/src/components/home/HomeFeature.js";
 import HomeTrust from "@/src/components/home/HomeTrust.js";
 import HomeKontakt from "@/src/components/home/HomeKontakt.js";
-import Footer2 from "@/src/components/blocks/footer-2.jsx";
+import Footer7 from "@/src/components/blocks/footer-7.jsx";
 
 export default function Home() {
   return (
@@ -17,7 +17,7 @@ export default function Home() {
       <HomeFeature />
       <HomeTrust />
       <HomeKontakt />
-      <Footer2 />
+      <Footer7 />
     </main>
   );
 }

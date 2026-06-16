@@ -23,7 +23,7 @@ export default function HomeKontakt({
     <section
       id="kontakt"
       className="w-full py-16 sm:py-24 px-4 sm:px-6 lg:px-8"
-      style={{ background: "#1d2128" }}>
+      style={{ background: "#111318" }}>
       <div className="max-w-[860px] mx-auto flex flex-col items-center text-center gap-8">
 
         <motion.div
@@ -82,24 +82,24 @@ export default function HomeKontakt({
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+          className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
           <a href={phoneHref}
-            className="flex items-center justify-center gap-2.5 px-8 py-4 rounded-xl font-bold text-white transition-all hover:-translate-y-0.5"
+            className="flex items-center justify-center gap-2.5 px-9 py-4 rounded-xl text-white text-base sm:text-lg transition-all duration-200 hover:-translate-y-0.5 hover:scale-[1.03]"
             style={{
-              fontFamily: "'Archivo', system-ui, sans-serif", fontSize: 16,
-              background: "linear-gradient(180deg, rgba(238,106,44,.92), rgba(216,88,31,.92))",
-              border: "1px solid rgba(255,255,255,0.22)",
-              boxShadow: "inset 0 1px 0 rgba(255,255,255,0.22), 0 4px 16px rgba(238,106,44,0.3)",
+              fontFamily: "'Archivo', system-ui, sans-serif", fontWeight: 700,
+              background: "linear-gradient(180deg, rgba(238,106,44,1), rgba(216,88,31,1))",
+              border: "1px solid rgba(255,255,255,0.25)",
+              boxShadow: "inset 0 1px 0 rgba(255,255,255,0.3), 0 8px 24px rgba(216,88,31,0.45), 0 2px 8px rgba(0,0,0,0.3)",
             }}>
             <PhoneIcon /> Jetzt anrufen
           </a>
           <a href={whatsappHref} target="_blank" rel="noopener noreferrer"
-            className="flex items-center justify-center gap-2.5 px-8 py-4 rounded-xl font-bold text-white transition-all hover:-translate-y-0.5"
+            className="flex items-center justify-center gap-2.5 px-8 py-4 rounded-xl text-white text-base sm:text-lg transition-all hover:-translate-y-px"
             style={{
-              fontFamily: "'Archivo', system-ui, sans-serif", fontSize: 16,
-              background: "linear-gradient(180deg, rgba(37,211,102,.9), rgba(31,190,90,.9))",
-              border: "1px solid rgba(255,255,255,0.2)",
-              boxShadow: "inset 0 1px 0 rgba(255,255,255,0.2), 0 4px 16px rgba(37,211,102,0.2)",
+              fontFamily: "'IBM Plex Sans', system-ui, sans-serif", fontWeight: 600,
+              background: "rgba(255,255,255,0.06)",
+              backdropFilter: "blur(20px)",
+              border: "1px solid rgba(255,255,255,0.16)",
             }}>
             <WhatsAppIcon /> WhatsApp schreiben
           </a>

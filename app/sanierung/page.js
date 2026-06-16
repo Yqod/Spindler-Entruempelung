@@ -2,7 +2,7 @@ import SanierungHero from "@/src/components/sanierung/SanierungHero.js";
 import SanierungLeistungen from "@/src/components/sanierung/SanierungLeistungen.js";
 import SanierungVersprechen from "@/src/components/sanierung/SanierungVersprechen.js";
 import HomeKontakt from "@/src/components/home/HomeKontakt.js";
-import Footer2 from "@/src/components/blocks/footer-2.jsx";
+import Footer7 from "@/src/components/blocks/footer-7.jsx";
 
 export const metadata = {
   title: "Sanierung – Spindler Entrümpelung Altmark",
@@ -16,7 +16,7 @@ export default function SanierungPage() {
       <SanierungLeistungen />
       <SanierungVersprechen />
       <HomeKontakt />
-      <Footer2 />
+      <Footer7 />
     </main>
   );
 }

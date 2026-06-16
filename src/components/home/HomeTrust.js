@@ -12,24 +12,27 @@ const stats = [
 const usps = [
   {
     icon: (
-      <svg viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4">
-        <path fillRule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clipRule="evenodd" />
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5">
+        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0Z" />
+        <circle cx="12" cy="10" r="3" />
       </svg>
     ),
     text: "Kostenlose Besichtigung vor Ort",
   },
   {
     icon: (
-      <svg viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4">
-        <path fillRule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clipRule="evenodd" />
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5">
+        <path d="M12 2 4 5v6c0 5 3.4 7.7 8 9 4.6-1.3 8-4 8-9V5l-8-3Z" />
+        <path d="m9 12 2 2 4-4" />
       </svg>
     ),
     text: "Festpreisgarantie – keine versteckten Kosten",
   },
   {
     icon: (
-      <svg viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4">
-        <path fillRule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clipRule="evenodd" />
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5">
+        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+        <circle cx="12" cy="7" r="4" />
       </svg>
     ),
     text: "Diskret, respektvoll und zuverlässig",
@@ -142,28 +145,8 @@ export default function HomeTrust() {
             height: "clamp(220px, 35vw, 480px)",
             border: "1px solid rgba(255,255,255,0.07)",
           }}>
-          <svg
-            className="absolute inset-0 w-full h-full"
-            xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <pattern id="stripes" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
-                <rect width="6" height="12" fill="#1d2128" />
-                <rect x="6" width="6" height="12" fill="#242932" />
-              </pattern>
-            </defs>
-            <rect width="100%" height="100%" fill="url(#stripes)" />
-            <text
-              x="50%" y="50%"
-              dominantBaseline="middle" textAnchor="middle"
-              fill="rgba(243,241,236,0.18)"
-              fontFamily="'IBM Plex Mono', monospace"
-              fontSize="13"
-              letterSpacing="0.12em">
-              FIRMENBILD · /firma.jpg
-            </text>
-          </svg>
           <img
-            src="/firma.jpg"
+            src="/pictures/firmenbild.png"
             alt="Spindler Entrümpelung – Team"
             className="absolute inset-0 w-full h-full object-cover"
           />
@@ -172,7 +155,8 @@ export default function HomeTrust() {
         <div style={{ height: 1, background: "rgba(255,255,255,0.07)" }} />
 
         {/* USPs */}
-        <div className="flex flex-col sm:flex-row flex-wrap gap-3 justify-center">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-px w-full max-w-4xl rounded-lg overflow-hidden"
+          style={{ background: "rgba(255,255,255,0.07)" }}>
           {usps.map((usp, i) => (
             <motion.div
               key={usp.text}
@@ -180,19 +164,15 @@ export default function HomeTrust() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: i * 0.1 }}
-              className="flex items-center gap-2.5 px-5 py-3 rounded-full"
-              style={{
-                background: "rgba(20,23,29,0.6)",
-                backdropFilter: "blur(12px)",
-                border: "1px solid rgba(255,255,255,0.10)",
-                boxShadow: "inset 0 1px 0 rgba(255,255,255,0.07)",
-              }}>
+              className="flex flex-col items-center gap-3 px-6 py-8"
+              style={{ background: "#111318" }}>
               <span style={{ color: "#ee6a2c" }}>{usp.icon}</span>
               <span
                 style={{
                   fontFamily: "'IBM Plex Sans', system-ui, sans-serif",
                   fontSize: 15,
                   fontWeight: 500,
+                  lineHeight: 1.5,
                   color: "#f3f1ec",
                 }}>
                 {usp.text}

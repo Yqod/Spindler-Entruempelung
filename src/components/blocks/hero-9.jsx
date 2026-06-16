@@ -67,7 +67,7 @@ export function Hero9({
         <div className="flex flex-col items-center text-center gap-6">
 
           <h1
-            className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-black text-white"
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black text-white"
             style={{
               fontFamily: "'Archivo', system-ui, sans-serif",
               letterSpacing: "-0.02em",
@@ -83,8 +83,19 @@ export function Hero9({
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.4 }}
-              className="text-lg sm:text-xl text-white/80 max-w-sm"
-              style={{ fontFamily: "'IBM Plex Sans', system-ui, sans-serif", lineHeight: 1.6 }}>
+              className="flex items-center gap-2 text-base sm:text-lg text-white/90"
+              style={{ fontFamily: "'IBM Plex Sans', system-ui, sans-serif" }}>
+              <svg
+                className="w-[18px] h-[18px] shrink-0 opacity-90"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0Z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
               {description}
             </motion.p>
           )}
@@ -98,15 +109,18 @@ export function Hero9({
               {buttons.map(({ href, icon, imgSrc, sublabel, label, primary }, i) => {
                 const Icon = ICONS[icon];
                 const orangeStyle = {
-                  background: "linear-gradient(180deg, rgba(238,106,44,0.92), rgba(216,88,31,0.92))",
-                  border: "1px solid rgba(255,255,255,0.22)",
-                  boxShadow: "inset 0 1px 0 rgba(255,255,255,0.22), 0 2px 8px rgba(0,0,0,0.3)",
+                  background: "linear-gradient(180deg, rgba(238,106,44,1), rgba(216,88,31,1))",
+                  border: "1px solid rgba(255,255,255,0.25)",
+                  boxShadow: "inset 0 1px 0 rgba(255,255,255,0.3), 0 8px 24px rgba(216,88,31,0.45), 0 2px 8px rgba(0,0,0,0.3)",
                 };
                 return (
                   <a
                     key={i}
                     href={href}
-                    className="flex items-center justify-center gap-2 px-6 py-3 rounded-lg text-white text-sm transition-all hover:-translate-y-px cursor-pointer"
+                    className={primary
+                      ? "flex items-center justify-center gap-2 px-9 py-4 rounded-xl text-white text-base sm:text-lg transition-all duration-200 hover:-translate-y-0.5 hover:scale-[1.03] cursor-pointer"
+                      : "flex items-center justify-center gap-2 px-6 py-3 rounded-lg text-white text-sm transition-all hover:-translate-y-px cursor-pointer"
+                    }
                     style={primary
                       ? { ...orangeStyle, fontFamily: "'Archivo', system-ui, sans-serif", fontWeight: 700 }
                       : { background: "rgba(255,255,255,0.1)", backdropFilter: "blur(20px)", border: "1px solid rgba(255,255,255,0.2)", fontFamily: "'IBM Plex Sans', system-ui, sans-serif" }
