@@ -130,7 +130,7 @@ export default function SanierungLeistungen() {
           transition={{ duration: 0.5 }}
           className="mb-10 sm:mb-14 flex flex-col gap-3">
           <span style={{
-            color: "#ee6a2c",
+            color: "#006FEF",
             fontFamily: "'IBM Plex Sans', system-ui, sans-serif",
             fontSize: 13, fontWeight: 600,
             letterSpacing: ".16em", textTransform: "uppercase",

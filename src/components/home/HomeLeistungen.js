@@ -59,7 +59,7 @@ function ResponsiveCard({ item, index }) {
           maxRotation={10}
           maxTranslation={10}
           borderRadius="8px"
-          spotlightColor="rgba(238,106,44,0.22)"
+          spotlightColor="rgba(0,111,239,0.22)"
           disableOnMobile
         />
       </Link>
@@ -82,7 +82,7 @@ export default function HomeLeistungen() {
           transition={{ duration: 0.5 }}
           className="mb-10 sm:mb-14 flex flex-col gap-3">
           <span style={{
-            color: "#ee6a2c",
+            color: "#006FEF",
             fontFamily: "'IBM Plex Sans', system-ui, sans-serif",
             fontSize: 13, fontWeight: 600,
             letterSpacing: ".16em", textTransform: "uppercase",

@@ -5,7 +5,7 @@ import HomeKontakt from "@/src/components/home/HomeKontakt.js";
 import Footer7 from "@/src/components/blocks/footer-7.jsx";
 
 export const metadata = {
-  title: "Entrümpelung – Spindler Entrümpelung Altmark",
+  title: "Entrümpelung – ASR Entrümpelung Altmark",
   description: "Wohnungen, Häuser, Büros, Schulen, Keller, Dachböden – wir entrümpeln alles. Festpreis, schnell und diskret in der Altmark.",
 };
 

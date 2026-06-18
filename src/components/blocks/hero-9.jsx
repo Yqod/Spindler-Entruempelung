@@ -71,7 +71,7 @@ export function Hero9({
             style={{
               fontFamily: "'Archivo', system-ui, sans-serif",
               letterSpacing: "-0.02em",
-              lineHeight: 1.04,
+              lineHeight: 0.95,
             }}>
             <BlurText text={titleLine1} delay={0.1} />
             <br />
@@ -109,17 +109,16 @@ export function Hero9({
               {buttons.map(({ href, icon, imgSrc, sublabel, label, primary }, i) => {
                 const Icon = ICONS[icon];
                 const orangeStyle = {
-                  background: "linear-gradient(180deg, rgba(238,106,44,1), rgba(216,88,31,1))",
-                  border: "1px solid rgba(255,255,255,0.25)",
-                  boxShadow: "inset 0 1px 0 rgba(255,255,255,0.3), 0 8px 24px rgba(216,88,31,0.45), 0 2px 8px rgba(0,0,0,0.3)",
+                  background: "#006FEF",
+                  boxShadow: "0 1px 2px rgba(0,0,0,0.12)",
                 };
                 return (
                   <a
                     key={i}
                     href={href}
                     className={primary
-                      ? "flex items-center justify-center gap-2 px-9 py-4 rounded-xl text-white text-base sm:text-lg transition-all duration-200 hover:-translate-y-0.5 hover:scale-[1.03] cursor-pointer"
-                      : "flex items-center justify-center gap-2 px-6 py-3 rounded-lg text-white text-sm transition-all hover:-translate-y-px cursor-pointer"
+                      ? "flex items-center justify-center gap-2 px-9 py-4 rounded-lg text-white text-base sm:text-lg transition-colors duration-200 hover:brightness-95 cursor-pointer"
+                      : "flex items-center justify-center gap-2 px-6 py-3 rounded-lg text-white text-sm transition-colors hover:bg-white/15 cursor-pointer"
                     }
                     style={primary
                       ? { ...orangeStyle, fontFamily: "'Archivo', system-ui, sans-serif", fontWeight: 700 }

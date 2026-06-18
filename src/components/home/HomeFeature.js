@@ -19,7 +19,7 @@ export default function HomeFeature() {
             transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
             className="flex flex-col gap-5">
             <span style={{
-              color: "#ee6a2c",
+              color: "#006FEF",
               fontFamily: "'IBM Plex Sans', system-ui, sans-serif",
               fontSize: 13, fontWeight: 600,
               letterSpacing: ".16em", textTransform: "uppercase",
@@ -46,13 +46,12 @@ export default function HomeFeature() {
             <div className="flex flex-col sm:flex-row gap-3 mt-2">
               <a
                 href="tel:+493931218030"
-                className="flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl font-bold text-white transition-all hover:-translate-y-0.5 w-fit"
+                className="flex items-center justify-center gap-2 px-6 py-3.5 rounded-lg font-bold text-white transition-colors hover:brightness-95 w-fit"
                 style={{
                   fontFamily: "'Archivo', system-ui, sans-serif",
                   fontSize: 15,
-                  background: "linear-gradient(180deg, rgba(238,106,44,.92), rgba(216,88,31,.92))",
-                  border: "1px solid rgba(255,255,255,0.22)",
-                  boxShadow: "inset 0 1px 0 rgba(255,255,255,0.22), 0 4px 16px rgba(238,106,44,0.25)",
+                  background: "#006FEF",
+                  boxShadow: "0 1px 2px rgba(0,0,0,0.12)",
                 }}>
                 Kostenlos anfragen
               </a>

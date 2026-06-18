@@ -59,12 +59,12 @@ export default function Footer2() {
                   fontSize: "clamp(2.5rem, 6vw, 4.5rem)",
                   letterSpacing: "-0.02em", lineHeight: 1, color: "#f3f1ec",
                 }}>
-                  Spindler
+                  ASR
                 </h2>
                 <p className="mt-1 font-semibold uppercase" style={{
                   fontFamily: "'IBM Plex Sans', system-ui, sans-serif",
                   fontSize: "clamp(0.7rem, 1.5vw, 0.9rem)",
-                  letterSpacing: ".18em", color: "#ee6a2c",
+                  letterSpacing: ".18em", color: "#006FEF",
                 }}>
                   Entrümpelung
                 </p>
@@ -106,7 +106,7 @@ export default function Footer2() {
                   fontFamily: "'IBM Plex Sans', system-ui, sans-serif",
                   fontSize: 13, color: "rgba(243,241,236,0.3)",
                 }}>
-                  © {year} Spindler Entrümpelung. Alle Rechte vorbehalten.
+                  © {year} ASR Entrümpelung. Alle Rechte vorbehalten.
                 </p>
                 <p style={{
                   fontFamily: "'IBM Plex Mono', monospace",

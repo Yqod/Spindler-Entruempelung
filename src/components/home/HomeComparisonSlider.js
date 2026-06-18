@@ -25,7 +25,7 @@ export default function HomeComparisonSlider({
           className="mb-10 flex flex-col items-center text-center gap-3">
           <span
             style={{
-              color: "#ee6a2c",
+              color: "#006FEF",
               fontFamily: "'IBM Plex Sans', system-ui, sans-serif",
               fontSize: 13,
               fontWeight: 600,
@@ -79,8 +79,8 @@ export default function HomeComparisonSlider({
             showLabels={true}
             labelText={{ before: "Vorher", after: "Nachher" }}
             labelPosition="top-left"
-            dividerColor="#ee6a2c"
-            handleColor="#ee6a2c"
+            dividerColor="#006FEF"
+            handleColor="#006FEF"
             handleSize={44}
             enableInertia={true}
             className="rounded-none"

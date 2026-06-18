@@ -33,7 +33,7 @@ export default function HomeKontakt({
           transition={{ duration: 0.5 }}
           className="flex flex-col items-center gap-4">
           <span style={{
-            color: "#ee6a2c",
+            color: "#006FEF",
             fontFamily: "'IBM Plex Sans', system-ui, sans-serif",
             fontSize: 13, fontWeight: 600,
             letterSpacing: ".16em", textTransform: "uppercase",
@@ -48,7 +48,7 @@ export default function HomeKontakt({
             color: "#f3f1ec",
           }}>
             Bereit für einen{" "}
-            <span style={{ color: "#ee6a2c" }}>sauberen Neustart?</span>
+            <span style={{ color: "#006FEF" }}>sauberen Neustart?</span>
           </h2>
           <p style={{
             fontFamily: "'IBM Plex Sans', system-ui, sans-serif",
@@ -84,21 +84,19 @@ export default function HomeKontakt({
           transition={{ duration: 0.5, delay: 0.2 }}
           className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
           <a href={phoneHref}
-            className="flex items-center justify-center gap-2.5 px-9 py-4 rounded-xl text-white text-base sm:text-lg transition-all duration-200 hover:-translate-y-0.5 hover:scale-[1.03]"
+            className="flex items-center justify-center gap-2.5 px-9 py-4 rounded-lg text-white text-base sm:text-lg transition-colors duration-200 hover:brightness-95"
             style={{
               fontFamily: "'Archivo', system-ui, sans-serif", fontWeight: 700,
-              background: "linear-gradient(180deg, rgba(238,106,44,1), rgba(216,88,31,1))",
-              border: "1px solid rgba(255,255,255,0.25)",
-              boxShadow: "inset 0 1px 0 rgba(255,255,255,0.3), 0 8px 24px rgba(216,88,31,0.45), 0 2px 8px rgba(0,0,0,0.3)",
+              background: "#006FEF",
+              boxShadow: "0 1px 2px rgba(0,0,0,0.12)",
             }}>
             <PhoneIcon /> Jetzt anrufen
           </a>
           <a href={whatsappHref} target="_blank" rel="noopener noreferrer"
-            className="flex items-center justify-center gap-2.5 px-8 py-4 rounded-xl text-white text-base sm:text-lg transition-all hover:-translate-y-px"
+            className="flex items-center justify-center gap-2.5 px-8 py-4 rounded-lg text-white text-base sm:text-lg transition-colors hover:bg-white/10"
             style={{
               fontFamily: "'IBM Plex Sans', system-ui, sans-serif", fontWeight: 600,
               background: "rgba(255,255,255,0.06)",
-              backdropFilter: "blur(20px)",
               border: "1px solid rgba(255,255,255,0.16)",
             }}>
             <WhatsAppIcon /> WhatsApp schreiben

@@ -56,9 +56,9 @@ function Step({ step, index }) {
         <div
           className="flex items-center justify-center w-14 h-14 rounded-full"
           style={{
-            background: "rgba(238,106,44,0.12)",
-            border: "1px solid rgba(238,106,44,0.3)",
-            color: "#ee6a2c",
+            background: "rgba(0,111,239,0.12)",
+            border: "1px solid rgba(0,111,239,0.3)",
+            color: "#006FEF",
           }}>
           {step.icon}
         </div>
@@ -129,7 +129,7 @@ export default function HomeProzess() {
           className="flex flex-col items-center text-center gap-3">
           <span
             style={{
-              color: "#ee6a2c",
+              color: "#006FEF",
               fontFamily: "'IBM Plex Sans', system-ui, sans-serif",
               fontSize: 13,
               fontWeight: 600,
@@ -167,7 +167,7 @@ export default function HomeProzess() {
               className="h-full origin-left"
               style={{
                 width: lineWidth,
-                background: "linear-gradient(90deg, #ee6a2c, rgba(238,106,44,0.25))",
+                background: "linear-gradient(90deg, #006FEF, rgba(0,111,239,0.25))",
               }}
             />
           </div>

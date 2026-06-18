@@ -11,7 +11,7 @@ solange sie diese Farb- und Typo-Grundlage nutzen.
 
 ## 1. Farben
 
-Anthrazit als Basis, Orange als einziger Akzent. Warme, leicht entsättigte
+Anthrazit als Basis, Blau als einziger Akzent. Warme, leicht entsättigte
 Schwarz-/Weißtöne (keine reinen `#000` / `#fff` als Flächen).
 
 ### Anthrazit (Basis & dunkle Flächen)
@@ -24,14 +24,14 @@ Schwarz-/Weißtöne (keine reinen `#000` / `#fff` als Flächen).
 | `--anthra-700` | `#363d49` | Borders / inaktive Akzente |
 | `--anthra-600` | `#4a525f` | gedämpfte Details |
 
-### Orange (Akzent – sparsam einsetzen)
+### Blau (Akzent – sparsam einsetzen)
 | Token | HEX | Einsatz |
 |---|---|---|
-| `--orange` | `#ee6a2c` | Primär-Buttons, Highlights, Kicker |
-| `--orange-600` | `#d8581f` | Hover Primär |
-| `--orange-700` | `#bd4a16` | Text auf Hell, kräftige Akzente |
-| `--orange-300` | `#f6a878` | Akzent auf dunklem Grund |
-| `--orange-tint` | `#fbe8db` | zarte Flächen / Icon-Hintergründe |
+| `--blau` | `#006FEF` | Primär-Buttons, Highlights, Kicker |
+| `--blau-600` | `#0059c4` | Hover Primär |
+| `--blau-700` | `#0047a3` | Text auf Hell, kräftige Akzente |
+| `--blau-300` | `#66a8f6` | Akzent auf dunklem Grund |
+| `--blau-tint` | `#dbeafe` | zarte Flächen / Icon-Hintergründe |
 
 ### Papier & Text
 | Token | HEX | Einsatz |
@@ -48,8 +48,8 @@ Schwarz-/Weißtöne (keine reinen `#000` / `#fff` als Flächen).
 | `--line-dark` | `rgba(255,255,255,.10)` | Trennlinien dunkel |
 
 **Regeln**
-- Orange ist der **einzige** Akzent – nicht mit weiteren Buntönen mischen.
-- Orange immer punktuell (CTAs, ein Highlight-Wort, Icons), nie als große Fläche.
+- Blau ist der **einzige** Akzent – nicht mit weiteren Buntönen mischen.
+- Blau immer punktuell (CTAs, ein Highlight-Wort, Icons), nie als große Fläche.
 - Grün `#25d366` ausschließlich für **WhatsApp**-Buttons (Funktionsfarbe, kein Designakzent).
 
 ---
@@ -77,7 +77,7 @@ Google Fonts:
 - Headlines: `font-weight: 800–900`, `letter-spacing: -0.02em`, `line-height: 1.04`.
 - Fließtext: `line-height: 1.6`, Basisgröße **17px** (Desktop).
 - Buttons: Archivo `700`.
-- „Kicker"/Eyebrow: IBM Plex Sans `600`, `13px`, `letter-spacing: .16em`, `UPPERCASE`, in Orange.
+- „Kicker"/Eyebrow: IBM Plex Sans `600`, `13px`, `letter-spacing: .16em`, `UPPERCASE`, in Blau.
 - Headlines dürfen groß und selbstbewusst sein (`clamp()` bis ~78px im Hero).
 
 ---
@@ -86,7 +86,7 @@ Google Fonts:
 
 - Radien dezent: `--radius: 4px`, größer `--radius-lg: 8px` (handwerklich, nicht verspielt).
   Ausnahme: **Glas-Elemente** dürfen runder sein (Pills `100px`, Cards `14–18px`).
-- Akzentkante: 4px Orange-Balken links an Karten statt bunter Flächen.
+- Akzentkante: 4px Blau-Balken links an Karten statt bunter Flächen.
 - Platzhalterbilder: gestreifte SVG-Flächen mit Mono-Label statt erfundener Grafiken.
 - **Keine** Verläufe als Deko, keine Emoji, kein „abgerundete Box mit linkem Farbstreifen"-Slop.
 - **Tonalität:** diskret und einfühlsam – besonders bei Messie-Wohnungen
@@ -125,15 +125,15 @@ keine Unschärfe sichtbar). Auf reinen Flächen stattdessen normale Cards verwen
 ### Varianten
 | Element | Look | Einsatz |
 |---|---|---|
-| **Glas-Pill** | `border-radius:100px`, Orange-Punkt | Scroll-/Filter-/Tag-Buttons |
+| **Glas-Pill** | `border-radius:100px`, Blau-Punkt | Scroll-/Filter-/Tag-Buttons |
 | **Glas-Card** | `border-radius:14–18px`, Icon oben | Trust-/Info-Karten über Foto |
 | **Glas-Button (neutral)** | `.glass`, `radius:14px` | sekundäre Aktionen |
-| **Glas-Button Orange** | `linear-gradient(180deg, rgba(238,106,44,.92), rgba(216,88,31,.92))` + helle Kante | **Primär-CTA** (Anrufen) |
+| **Glas-Button Blau** | `linear-gradient(180deg, rgba(0,111,239,.92), rgba(0,89,196,.92))` + helle Kante | **Primär-CTA** (Anrufen) |
 | **Glas-Button WhatsApp** | `linear-gradient(180deg, rgba(37,211,102,.9), rgba(31,190,90,.9))` | WhatsApp |
 
 **Regeln**
 - Hover: auf `--glass-bg-strong` wechseln + `translateY(-2px)`, Kante heller.
-- Akzent bleibt Orange – Orange-Glas ist der einzige farbige CTA, Grün nur WhatsApp.
+- Akzent bleibt Blau – Blau-Glas ist der einzige farbige CTA, Grün nur WhatsApp.
 - Sparsam: Glas ist für Hero/Foto-Sektionen. Helle Inhalts-Sektionen bleiben Papier + normale Cards.
 - Performance/Fallback: ältere Browser ohne `backdrop-filter` zeigen die halbtransparente
   Fläche ohne Unschärfe – bleibt lesbar.

@@ -15,32 +15,16 @@ export default function Footer7() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="grid grid-cols-1 lg:grid-cols-[1.3fr_1fr_1fr] gap-10 lg:gap-8">
-          <div className="flex flex-col">
-            <h3
-              className="font-black"
-              style={{
-                fontFamily: "'Archivo', system-ui, sans-serif",
-                fontSize: "clamp(2rem, 4vw, 3rem)",
-                letterSpacing: "-0.02em",
-                lineHeight: 1,
-                color: "#f3f1ec",
-              }}>
-              Spindler
-            </h3>
-            <p
-              className="mt-1 font-semibold uppercase"
-              style={{
-                fontFamily: "'IBM Plex Sans', system-ui, sans-serif",
-                fontSize: "clamp(0.7rem, 1.5vw, 0.9rem)",
-                letterSpacing: ".18em",
-                color: "#ee6a2c",
-              }}>
-              Entrümpelung
-            </p>
+          className="grid grid-cols-1 lg:grid-cols-[1.3fr_1fr_1fr] gap-10 lg:gap-8 text-center lg:text-left">
+          <div className="flex flex-col items-center lg:items-start">
+            <img
+              src="/assets/log-neu1.png"
+              alt="Altmark Sanierung und Räumung"
+              className="h-32 sm:h-40 w-auto object-contain"
+            />
           </div>
 
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-4 items-center lg:items-start">
             <h4
               className="text-xs tracking-[0.2em] uppercase"
               style={{ color: "rgba(243,241,236,0.5)", fontFamily: "'IBM Plex Sans', system-ui, sans-serif" }}>
@@ -58,7 +42,7 @@ export default function Footer7() {
                 <li key={l.label}>
                   <a
                     href={l.href}
-                    className="transition-colors hover:text-[#ee6a2c]">
+                    className="transition-colors hover:text-[#006FEF]">
                     {l.label}
                   </a>
                 </li>
@@ -66,7 +50,7 @@ export default function Footer7() {
             </ul>
           </div>
 
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-4 items-center lg:items-start">
             <h4
               className="text-xs tracking-[0.2em] uppercase"
               style={{ color: "rgba(243,241,236,0.5)", fontFamily: "'IBM Plex Sans', system-ui, sans-serif" }}>
@@ -83,7 +67,7 @@ export default function Footer7() {
         </motion.div>
 
         <div
-          className="mt-16 pt-8 flex flex-col sm:flex-row gap-4 items-center justify-between"
+          className="mt-16 pt-8 flex flex-col sm:flex-row gap-4 items-center sm:justify-between text-center"
           style={{ borderTop: "1px solid rgba(255,255,255,0.07)" }}>
           <p
             style={{
@@ -91,7 +75,7 @@ export default function Footer7() {
               fontSize: 13,
               color: "rgba(243,241,236,0.3)",
             }}>
-            © {year} Spindler Entrümpelung. Alle Rechte vorbehalten.
+            © {year} ASR Entrümpelung. Alle Rechte vorbehalten.
           </p>
           <div
             className="flex items-center gap-3"

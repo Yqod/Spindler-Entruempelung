@@ -5,7 +5,7 @@ import HomeKontakt from "@/src/components/home/HomeKontakt.js";
 import Footer7 from "@/src/components/blocks/footer-7.jsx";
 
 export const metadata = {
-  title: "Sanierung – Spindler Entrümpelung Altmark",
+  title: "Sanierung – ASR Entrümpelung Altmark",
   description: "Böden, Wände, Bad, Trockenbau und mehr – wir sanieren nach der Entrümpelung direkt weiter. Festpreis, bezugsfertig, aus einer Hand.",
 };
 

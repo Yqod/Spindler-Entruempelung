@@ -6,63 +6,63 @@ const services = [
   {
     title: "Wohnungen & Wohnanlagen",
     description: "Einzel- und Mehrfamilienhäuser, Mietwohnungen, WGs – komplett oder teilweise, auf Wunsch besenrein.",
-    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&q=80",
+    image: "/entruempelung/entruempelung-wohnung.webp",
     span: "col-span-1 sm:col-span-2 md:col-span-3",
     aspect: "aspect-[3/1]",
   },
   {
     title: "Keller",
     description: "Jahrzehnte angesammeltes Material – wir schaffen Platz schnell und gründlich.",
-    image: "https://images.unsplash.com/photo-1585237672814-8f85a8118bf6?w=700&q=80",
+    image: "/entruempelung/entruempelung-keller.webp",
     span: "col-span-1",
     aspect: "aspect-square",
   },
   {
     title: "Büros & Praxen",
     description: "Gewerbliche Räume, Arztpraxen, Kanzleien – diskret und termingerecht.",
-    image: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=700&q=80",
+    image: "/entruempelung/entruempelung-rest.webp",
     span: "col-span-1",
     aspect: "aspect-square",
   },
   {
     title: "Dachböden",
     description: "Möbel, Kisten, alte Elektrogeräte – alles wird fachgerecht entsorgt oder verwertet.",
-    image: "https://images.unsplash.com/photo-1558618047-3b34bfdb4bec?w=700&q=80",
+    image: "/entruempelung/entruempelung-dachboden.webp",
     span: "col-span-1",
     aspect: "aspect-square",
   },
   {
     title: "Messie-Wohnungen",
     description: "Einfühlsam, diskret und ohne Wertung – wir gehen respektvoll mit jeder Situation um.",
-    image: "https://images.unsplash.com/photo-1530555554800-fd2a6cc30d97?w=700&q=80",
+    image: "/entruempelung/entruempelung-messi.webp",
     span: "col-span-1",
     aspect: "aspect-square",
   },
   {
     title: "Schulen & Bildungseinrichtungen",
     description: "Klassen-, Lager- und Technikräume – auch während der Ferien schnell und zuverlässig.",
-    image: "https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=900&q=80",
+    image: "/entruempelung/entruempelung-schulen.webp",
     span: "col-span-1 md:col-span-2",
     aspect: "aspect-[2/1]",
   },
   {
     title: "Garagen & Stellplätze",
     description: "Öl, Altreifen, Werkzeug, alte Fahrzeugteile – wir kümmern uns um die fachgerechte Entsorgung.",
-    image: "https://images.unsplash.com/photo-1558981806-ec527fa84c39?w=700&q=80",
+    image: "/entruempelung/entruempelung-garagen.webp",
     span: "col-span-1",
     aspect: "aspect-square",
   },
   {
     title: "Lager & Hallen",
     description: "Industrie- und Gewerbelagerflächen, Produktionsstätten – auch großvolumige Aufträge.",
-    image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=700&q=80",
+    image: "/entruempelung/entruempelung-lager.webp",
     span: "col-span-1",
     aspect: "aspect-square",
   },
   {
     title: "Haushaltsauflösung",
     description: "Vollständige Auflösung nach Todesfall oder Umzug – mit Wertanrechnung verwertbarer Gegenstände.",
-    image: "https://images.unsplash.com/photo-1484154218962-a197022b5858?w=700&q=80",
+    image: "/entruempelung/entruempelung-haushalt.webp",
     span: "col-span-1",
     aspect: "aspect-square",
   },
@@ -131,7 +131,7 @@ export default function EntruempelungServices() {
           transition={{ duration: 0.5 }}
           className="mb-10 sm:mb-14 flex flex-col gap-3">
           <span style={{
-            color: "#ee6a2c",
+            color: "#006FEF",
             fontFamily: "'IBM Plex Sans', system-ui, sans-serif",
             fontSize: 13, fontWeight: 600,
             letterSpacing: ".16em", textTransform: "uppercase",
@@ -153,7 +153,7 @@ export default function EntruempelungServices() {
             color: "rgba(243,241,236,0.55)",
             maxWidth: 520,
           }}>
-            Hover über die Kacheln für mehr Details zu jedem Bereich.
+            Ihr Partner in Altmark und Umgebung – wir entrümpeln Wohnungen, Keller, Büros, Dachböden, Garagen und mehr.
           </p>
         </motion.div>
 

@@ -5,7 +5,7 @@ import HomeKontakt from "@/src/components/home/HomeKontakt.js";
 import Footer7 from "@/src/components/blocks/footer-7.jsx";
 
 export const metadata = {
-  title: "Haushaltsauflösung – Spindler Entrümpelung Altmark",
+  title: "Haushaltsauflösung – ASR Entrümpelung Altmark",
   description: "Haushaltsauflösungen nach Todesfall, Umzug ins Pflegeheim oder Auszug – einfühlsam, diskret und vollständig. Mit Wertanrechnung und Festpreis.",
 };
 

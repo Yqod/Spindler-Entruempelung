@@ -2,7 +2,7 @@ import "./globals.css";
 import { Navigation7 } from "@/src/components/blocks/navigation-7";
 
 export const metadata = {
-  title: "Spindler Entrümpelung – Altmark",
+  title: "ASR Entrümpelung – Altmark",
   description: "Professionelle Entrümpelung und Haushaltsauflösung in der Altmark. Schnell, diskret und zuverlässig.",
 };
 

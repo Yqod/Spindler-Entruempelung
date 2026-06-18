@@ -3,9 +3,8 @@
 import { motion } from "motion/react";
 
 const orangeBtn = {
-  background: "linear-gradient(180deg, rgba(238,106,44,0.92), rgba(216,88,31,0.92))",
-  border: "1px solid rgba(255,255,255,0.22)",
-  boxShadow: "inset 0 1px 0 rgba(255,255,255,0.22), 0 4px 16px rgba(238,106,44,0.25)",
+  background: "#006FEF",
+  boxShadow: "0 1px 2px rgba(0,0,0,0.12)",
 };
 
 export default function EntruempelungHero() {
@@ -31,19 +30,6 @@ export default function EntruempelungHero() {
       <div className="max-w-[1400px] mx-auto w-full relative z-10">
         <div className="max-w-3xl flex flex-col gap-6">
 
-          <motion.span
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            style={{
-              color: "#ee6a2c",
-              fontFamily: "'IBM Plex Sans', system-ui, sans-serif",
-              fontSize: 13, fontWeight: 600,
-              letterSpacing: ".16em", textTransform: "uppercase",
-            }}>
-            Professionelle Entrümpelung
-          </motion.span>
-
           <motion.h1
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
@@ -51,7 +37,7 @@ export default function EntruempelungHero() {
             style={{
               fontFamily: "'Archivo', system-ui, sans-serif",
               fontWeight: 900,
-              fontSize: "clamp(3rem, 8vw, 7rem)",
+              fontSize: "clamp(2.2rem, 5.5vw, 4.5rem)",
               letterSpacing: "-0.02em",
               lineHeight: 1.04,
               color: "#f3f1ec",
@@ -81,7 +67,7 @@ export default function EntruempelungHero() {
             className="flex flex-col sm:flex-row gap-3 pt-2">
             <a
               href="#kontakt"
-              className="flex items-center justify-center gap-2 px-7 py-4 rounded-xl font-bold text-white transition-all hover:-translate-y-0.5"
+              className="flex items-center justify-center gap-2 px-7 py-4 rounded-lg font-bold text-white transition-colors hover:brightness-95"
               style={{ ...orangeBtn, fontFamily: "'Archivo', system-ui, sans-serif", fontSize: 16 }}>
               Kostenlos anfragen
             </a>
