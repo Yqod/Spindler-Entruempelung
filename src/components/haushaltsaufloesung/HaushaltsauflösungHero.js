@@ -16,8 +16,9 @@ export default function HaushaltsauflösungHero() {
         loop
         muted
         playsInline
+        preload="auto"
         className="absolute inset-0 w-full h-full object-cover"
-        poster="https://images.unsplash.com/photo-1484154218962-a197022b5858?w=1920&q=80">
+        poster="/comparisonPictures/haushaltsauflösung_voll.webp">
         <source
           src="/comparisonPictures/haushaltsauflösung_video.mp4"
           type="video/mp4"

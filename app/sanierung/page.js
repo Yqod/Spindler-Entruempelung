@@ -3,6 +3,7 @@ import SanierungLeistungen from "@/src/components/sanierung/SanierungLeistungen.
 import SanierungVersprechen from "@/src/components/sanierung/SanierungVersprechen.js";
 import HomeKontakt from "@/src/components/home/HomeKontakt.js";
 import Footer7 from "@/src/components/blocks/footer-7.jsx";
+import HeroPreloader from "@/src/components/react-bits/HeroPreloader.jsx";
 
 export const metadata = {
   title: "Sanierung – ASR Entrümpelung Altmark",
@@ -11,12 +12,14 @@ export const metadata = {
 
 export default function SanierungPage() {
   return (
-    <main className="flex flex-col overflow-x-hidden">
-      <SanierungHero />
-      <SanierungLeistungen />
-      <SanierungVersprechen />
-      <HomeKontakt />
-      <Footer7 />
-    </main>
+    <HeroPreloader videoSrc="/comparisonPictures/apartment_renovation_hero.mp4" label="Sanierung">
+      <main className="flex flex-col overflow-x-hidden">
+        <SanierungHero />
+        <SanierungLeistungen />
+        <SanierungVersprechen />
+        <HomeKontakt />
+        <Footer7 />
+      </main>
+    </HeroPreloader>
   );
 }

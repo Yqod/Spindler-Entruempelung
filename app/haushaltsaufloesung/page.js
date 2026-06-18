@@ -3,6 +3,7 @@ import HaushaltsauflösungLeistungen from "@/src/components/haushaltsaufloesung/
 import HaushaltsauflösungVersprechen from "@/src/components/haushaltsaufloesung/HaushaltsauflösungVersprechen.js";
 import HomeKontakt from "@/src/components/home/HomeKontakt.js";
 import Footer7 from "@/src/components/blocks/footer-7.jsx";
+import HeroPreloader from "@/src/components/react-bits/HeroPreloader.jsx";
 
 export const metadata = {
   title: "Haushaltsauflösung – ASR Entrümpelung Altmark",
@@ -11,12 +12,14 @@ export const metadata = {
 
 export default function HaushaltsauflösungPage() {
   return (
-    <main className="flex flex-col overflow-x-hidden">
-      <HaushaltsauflösungHero />
-      <HaushaltsauflösungLeistungen />
-      <HaushaltsauflösungVersprechen />
-      <HomeKontakt />
-      <Footer7 />
-    </main>
+    <HeroPreloader videoSrc="/comparisonPictures/haushaltsauflösung_video.mp4" label="Haushaltsauflösung">
+      <main className="flex flex-col overflow-x-hidden">
+        <HaushaltsauflösungHero />
+        <HaushaltsauflösungLeistungen />
+        <HaushaltsauflösungVersprechen />
+        <HomeKontakt />
+        <Footer7 />
+      </main>
+    </HeroPreloader>
   );
 }

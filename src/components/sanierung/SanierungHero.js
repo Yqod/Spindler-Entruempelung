@@ -16,8 +16,9 @@ export default function SanierungHero() {
         loop
         muted
         playsInline
+        preload="auto"
         className="absolute inset-0 w-full h-full object-cover"
-        poster="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1920&q=80">
+        poster="/pictures/leistung_sanierung_neu.png">
         <source
           src="/comparisonPictures/apartment_renovation_hero.mp4"
           type="video/mp4"

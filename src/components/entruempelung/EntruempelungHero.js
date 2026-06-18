@@ -18,8 +18,9 @@ export default function EntruempelungHero() {
         loop
         muted
         playsInline
+        preload="auto"
         className="absolute inset-0 w-full h-full object-cover"
-        poster="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920&q=80">
+        poster="/comparisonPictures/entrümpelung_davor.webp">
         <source
           src="/comparisonPictures/Furniture_and_trash_disappear_202606141640.mp4"
           type="video/mp4"

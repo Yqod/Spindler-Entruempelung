@@ -4,12 +4,11 @@ export default function HomeHero() {
   return (
     <Hero9
       videoSrc="/comparisonPictures/apartment_renovation_hero.mp4"
-      poster="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920&q=80"
+      poster="/comparisonPictures/altbau_neu.webp"
       eyebrow="Ihr Partner in der Region"
       titleLine1="Entrümpelung und"
       titleLine2="Sanierung"
-      description="Altmark und Umgebung"
-      tagline="Schnell, diskret & zum Festpreis"
+      description="Von der Entrümpelung bis zur fertigen Sanierung – alles aus einer Hand in der Altmark und Umgebung. Schnell, diskret und zum Festpreis."
       buttons={[
         { href: "#kontakt", label: "Jetzt Anfragen", primary: true },
       ]}

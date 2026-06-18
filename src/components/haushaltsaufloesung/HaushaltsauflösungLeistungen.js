@@ -9,56 +9,56 @@ const services = [
       "Wir gehen mit dem Nachlass eines Verstorbenen behutsam und respektvoll um. Persönliche Gegenstände werden nach Ihren Wünschen behandelt – nichts geht verloren ohne Ihre Zustimmung.",
     image: "/haushaltsaufloesung/haushaltsaufloesung-tod.png",
     span: "col-span-1 sm:col-span-2 md:col-span-3",
-    aspect: "aspect-[3/1]",
+    aspect: "sm:aspect-[2/1] md:aspect-[3/1]",
   },
   {
     title: "Umzug ins Pflegeheim",
     description: "Wenn ein Angehöriger in eine Pflegeeinrichtung zieht, übernehmen wir die gesamte Wohnungsauflösung – schnell und ohne zusätzliche Last für die Familie.",
     image: "/haushaltsaufloesung/haushaltsaufloesung-umzug-pflegeheim.png",
     span: "col-span-1",
-    aspect: "aspect-square",
+    aspect: "sm:aspect-square",
   },
   {
     title: "Wertanrechnung",
     description: "Verwertbare Möbel, Antiquitäten und Gegenstände werden bewertet und vom Auftragspreis abgezogen. Sie profitieren direkt.",
     image: "/haushaltsaufloesung/haushaltsaufloesung-wertanrechnung.png",
     span: "col-span-1",
-    aspect: "aspect-square",
+    aspect: "sm:aspect-square",
   },
   {
     title: "Möbel & Inventar",
     description: "Schwere Möbel, Küchen, Elektrogeräte – wir demontieren, tragen aus und entsorgen oder verwerten alles fachgerecht.",
     image: "/haushaltsaufloesung/haushaltsaufloesung-moebel.png",
     span: "col-span-1",
-    aspect: "aspect-square",
+    aspect: "sm:aspect-square",
   },
   {
     title: "Wohnungsauflösung",
     description: "Komplette Auflösung bei Auszug, Zwangsräumung oder Eigentümerwechsel – besenrein und termingerecht übergeben.",
     image: "/haushaltsaufloesung/haushaltsaufloesung-wohnung.png",
     span: "col-span-1 md:col-span-2",
-    aspect: "aspect-[2/1]",
+    aspect: "sm:aspect-square md:aspect-[2/1]",
   },
   {
     title: "Nachlassverwaltung",
     description: "Wir unterstützen bei der Sichtung und Sortierung des Nachlasses – was bleibt, was geht, was gespendet wird.",
     image: "/haushaltsaufloesung/haushaltsaufloesung-nachlass.png",
     span: "col-span-1",
-    aspect: "aspect-square",
+    aspect: "sm:aspect-square",
   },
   {
     title: "Besenreine Übergabe",
     description: "Nach der Auflösung reinigen wir die Räume auf Wunsch vollständig – bereit für Vermieter, Käufer oder Erben.",
     image: "/haushaltsaufloesung/haushaltsaufloesung-besenrein.png",
     span: "col-span-1",
-    aspect: "aspect-square",
+    aspect: "sm:aspect-square",
   },
   {
     title: "Alles aus einer Hand",
     description: "Von der ersten Besichtigung bis zur Schlüsselübergabe – wir koordinieren alles, Sie müssen sich um nichts kümmern.",
     image: "/haushaltsaufloesung/haushaltsaufloesung-alles.png",
     span: "col-span-1 md:col-span-2",
-    aspect: "aspect-[2/1]",
+    aspect: "sm:aspect-square md:aspect-[2/1]",
   },
 ];
 
@@ -69,7 +69,7 @@ function ServiceCard({ service, index }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-40px" }}
       transition={{ duration: 0.5, delay: (index % 3) * 0.1, ease: [0.4, 0, 0.2, 1] }}
-      className={`relative overflow-hidden rounded-lg group ${service.span} aspect-[4/3] sm:${service.aspect}`}
+      className={`relative overflow-hidden rounded-lg group ${service.span} aspect-[4/3] ${service.aspect}`}
       style={{ border: "1px solid rgba(255,255,255,0.07)" }}>
 
       <img

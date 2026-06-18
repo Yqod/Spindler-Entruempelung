@@ -59,6 +59,7 @@ export function Hero9({
         loop
         muted
         playsInline
+        preload="auto"
         className="absolute inset-0 w-full h-full object-cover"
         poster={poster}>
         <source src={videoSrc} type="video/mp4" />
@@ -72,62 +73,45 @@ export function Hero9({
         }}
       />
 
-      <div className="relative z-10 min-h-screen flex items-end px-4 sm:px-6 lg:px-8 pb-12 sm:pb-20 lg:pb-24">
+      <div className="relative z-10 min-h-screen flex items-end px-4 sm:px-6 lg:px-8 pb-16 sm:pb-24">
         <div className="max-w-[1400px] mx-auto w-full">
-          <div className="max-w-4xl flex flex-col items-start text-left gap-5 sm:gap-6">
+        <div className="max-w-3xl flex flex-col gap-6">
 
             
 
             {/* Headline */}
             <h1
-              className="text-[2rem] min-[420px]:text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black text-white"
+              className="font-black"
               style={{
                 fontFamily: "'Archivo', system-ui, sans-serif",
-                letterSpacing: "-0.03em",
-                lineHeight: 0.95,
+                fontSize: "clamp(2.2rem, 5.5vw, 4.5rem)",
+                letterSpacing: "-0.02em",
+                lineHeight: 1.04,
+                color: "#f3f1ec",
               }}>
               <span className="block" style={{ fontWeight: 200 }}>
                 <BlurText text={titleLine1} delay={0.15} />
               </span>
-              <span className="block" style={{ color: "#007DF8" }}>
+              <span className="block" style={{ color: "#007DF8", fontWeight: 900 }}>
                 <BlurText text={titleLine2} delay={0.5} />
               </span>
             </h1>
 
-            {/* Info-Zeile: Standort + Tagline */}
-            {(description || tagline) && (
-              <motion.div
-                initial={{ opacity: 0, y: 10 }}
+            {/* Beschreibung – wie auf den Leistungsseiten */}
+            {description && (
+              <motion.p
+                initial={{ opacity: 0, y: 16 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.65 }}
-                className="flex flex-wrap items-center gap-x-4 gap-y-2 pt-1"
-                style={{ fontFamily: "'IBM Plex Sans', system-ui, sans-serif" }}>
-                {description && (
-                  <span className="flex items-center gap-2 text-base sm:text-lg text-white/90">
-                    <svg
-                      className="w-[18px] h-[18px] shrink-0"
-                      style={{ color: "#007DF8" }}
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round">
-                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0Z" />
-                      <circle cx="12" cy="10" r="3" />
-                    </svg>
-                    {description}
-                  </span>
-                )}
-                {description && tagline && (
-                  <span className="hidden sm:block h-4 w-px bg-white/25" />
-                )}
-                {tagline && (
-                  <span className="text-base sm:text-lg text-white/65">
-                    {tagline}
-                  </span>
-                )}
-              </motion.div>
+                style={{
+                  fontFamily: "'IBM Plex Sans', system-ui, sans-serif",
+                  fontSize: 18,
+                  lineHeight: 1.65,
+                  color: "rgba(243,241,236,0.6)",
+                  maxWidth: 540,
+                }}>
+                {description}
+              </motion.p>
             )}
 
             {buttons.length > 0 && (
@@ -135,7 +119,7 @@ export function Hero9({
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.75 }}
-                className="flex flex-row flex-wrap gap-3 pt-2">
+                className="flex flex-col sm:flex-row gap-3 pt-2">
                 {buttons.map(({ href, icon, imgSrc, sublabel, label, primary }, i) => {
                   const Icon = ICONS[icon];
                   const orangeStyle = {
@@ -147,12 +131,12 @@ export function Hero9({
                       key={i}
                       href={href}
                       className={primary
-                        ? "flex items-center justify-center gap-2 px-9 py-4 rounded-lg text-white text-base sm:text-lg transition-colors duration-200 hover:brightness-95 cursor-pointer"
-                        : "flex items-center justify-center gap-2 px-6 py-4 rounded-lg text-white text-base transition-colors hover:bg-white/15 cursor-pointer"
+                        ? "flex items-center justify-center gap-2 px-7 py-4 rounded-lg font-bold text-white transition-colors hover:brightness-95 cursor-pointer"
+                        : "flex items-center justify-center gap-2 px-7 py-4 rounded-lg font-bold transition-colors hover:bg-white/10 cursor-pointer"
                       }
                       style={primary
-                        ? { ...orangeStyle, fontFamily: "'Archivo', system-ui, sans-serif", fontWeight: 700 }
-                        : { background: "rgba(255,255,255,0.1)", backdropFilter: "blur(20px)", border: "1px solid rgba(255,255,255,0.2)", fontFamily: "'IBM Plex Sans', system-ui, sans-serif" }
+                        ? { ...orangeStyle, fontFamily: "'Archivo', system-ui, sans-serif", fontSize: 16 }
+                        : { fontFamily: "'Archivo', system-ui, sans-serif", fontSize: 16, background: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.14)", color: "#f3f1ec" }
                       }>
                       {imgSrc ? (
                         <Image src={imgSrc} alt={label} width={96} height={32} className="h-8 w-auto object-contain" />
