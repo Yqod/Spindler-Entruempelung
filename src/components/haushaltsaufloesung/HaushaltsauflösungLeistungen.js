@@ -124,7 +124,7 @@ export default function HaushaltsauflösungLeistungen() {
           transition={{ duration: 0.5 }}
           className="mb-10 sm:mb-14 flex flex-col gap-3">
           <span style={{
-            color: "#006FEF",
+            color: "#007DF8",
             fontFamily: "'IBM Plex Sans', system-ui, sans-serif",
             fontSize: 13, fontWeight: 600,
             letterSpacing: ".16em", textTransform: "uppercase",

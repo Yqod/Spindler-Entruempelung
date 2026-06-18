@@ -42,7 +42,7 @@ export default function Footer7() {
                 <li key={l.label}>
                   <a
                     href={l.href}
-                    className="transition-colors hover:text-[#006FEF]">
+                    className="transition-colors hover:text-[#007DF8]">
                     {l.label}
                   </a>
                 </li>

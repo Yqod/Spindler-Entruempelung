@@ -27,7 +27,7 @@ Schwarz-/Weißtöne (keine reinen `#000` / `#fff` als Flächen).
 ### Blau (Akzent – sparsam einsetzen)
 | Token | HEX | Einsatz |
 |---|---|---|
-| `--blau` | `#006FEF` | Primär-Buttons, Highlights, Kicker |
+| `--blau` | `#007DF8` | Primär-Buttons, Highlights, Kicker |
 | `--blau-600` | `#0059c4` | Hover Primär |
 | `--blau-700` | `#0047a3` | Text auf Hell, kräftige Akzente |
 | `--blau-300` | `#66a8f6` | Akzent auf dunklem Grund |
@@ -128,7 +128,7 @@ keine Unschärfe sichtbar). Auf reinen Flächen stattdessen normale Cards verwen
 | **Glas-Pill** | `border-radius:100px`, Blau-Punkt | Scroll-/Filter-/Tag-Buttons |
 | **Glas-Card** | `border-radius:14–18px`, Icon oben | Trust-/Info-Karten über Foto |
 | **Glas-Button (neutral)** | `.glass`, `radius:14px` | sekundäre Aktionen |
-| **Glas-Button Blau** | `linear-gradient(180deg, rgba(0,111,239,.92), rgba(0,89,196,.92))` + helle Kante | **Primär-CTA** (Anrufen) |
+| **Glas-Button Blau** | `linear-gradient(180deg, rgba(0,125,248,.92), rgba(0,89,196,.92))` + helle Kante | **Primär-CTA** (Anrufen) |
 | **Glas-Button WhatsApp** | `linear-gradient(180deg, rgba(37,211,102,.9), rgba(31,190,90,.9))` | WhatsApp |
 
 **Regeln**

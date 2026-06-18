@@ -33,7 +33,7 @@ export default function HomeKontakt({
           transition={{ duration: 0.5 }}
           className="flex flex-col items-center gap-4">
           <span style={{
-            color: "#006FEF",
+            color: "#007DF8",
             fontFamily: "'IBM Plex Sans', system-ui, sans-serif",
             fontSize: 13, fontWeight: 600,
             letterSpacing: ".16em", textTransform: "uppercase",
@@ -48,7 +48,7 @@ export default function HomeKontakt({
             color: "#f3f1ec",
           }}>
             Bereit für einen{" "}
-            <span style={{ color: "#006FEF" }}>sauberen Neustart?</span>
+            <span style={{ color: "#007DF8" }}>sauberen Neustart?</span>
           </h2>
           <p style={{
             fontFamily: "'IBM Plex Sans', system-ui, sans-serif",
@@ -87,7 +87,7 @@ export default function HomeKontakt({
             className="flex items-center justify-center gap-2.5 px-9 py-4 rounded-lg text-white text-base sm:text-lg transition-colors duration-200 hover:brightness-95"
             style={{
               fontFamily: "'Archivo', system-ui, sans-serif", fontWeight: 700,
-              background: "#006FEF",
+              background: "#007DF8",
               boxShadow: "0 1px 2px rgba(0,0,0,0.12)",
             }}>
             <PhoneIcon /> Jetzt anrufen

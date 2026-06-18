@@ -64,7 +64,7 @@ export default function Footer2() {
                 <p className="mt-1 font-semibold uppercase" style={{
                   fontFamily: "'IBM Plex Sans', system-ui, sans-serif",
                   fontSize: "clamp(0.7rem, 1.5vw, 0.9rem)",
-                  letterSpacing: ".18em", color: "#006FEF",
+                  letterSpacing: ".18em", color: "#007DF8",
                 }}>
                   Entrümpelung
                 </p>

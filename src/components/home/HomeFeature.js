@@ -19,7 +19,7 @@ export default function HomeFeature() {
             transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
             className="flex flex-col gap-5">
             <span style={{
-              color: "#006FEF",
+              color: "#007DF8",
               fontFamily: "'IBM Plex Sans', system-ui, sans-serif",
               fontSize: 13, fontWeight: 600,
               letterSpacing: ".16em", textTransform: "uppercase",
@@ -50,7 +50,7 @@ export default function HomeFeature() {
                 style={{
                   fontFamily: "'Archivo', system-ui, sans-serif",
                   fontSize: 15,
-                  background: "#006FEF",
+                  background: "#007DF8",
                   boxShadow: "0 1px 2px rgba(0,0,0,0.12)",
                 }}>
                 Kostenlos anfragen

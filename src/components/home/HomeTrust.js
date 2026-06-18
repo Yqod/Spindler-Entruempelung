@@ -74,7 +74,7 @@ export default function HomeTrust() {
           transition={{ duration: 0.5 }}
           className="flex flex-col items-center gap-3">
           <span style={{
-            color: "#006FEF",
+            color: "#007DF8",
             fontFamily: "'IBM Plex Sans', system-ui, sans-serif",
             fontSize: 13, fontWeight: 600,
             letterSpacing: ".16em", textTransform: "uppercase",
@@ -117,7 +117,7 @@ export default function HomeTrust() {
                 className="font-bold text-xl"
                 style={{
                   fontFamily: "'Archivo', system-ui, sans-serif",
-                  color: "#006FEF",
+                  color: "#007DF8",
                   letterSpacing: "-0.01em",
                 }}>
                 {s.label}
@@ -166,7 +166,7 @@ export default function HomeTrust() {
               transition={{ duration: 0.4, delay: i * 0.1 }}
               className="flex flex-col items-center gap-3 px-6 py-8"
               style={{ background: "#111318" }}>
-              <span style={{ color: "#006FEF" }}>{usp.icon}</span>
+              <span style={{ color: "#007DF8" }}>{usp.icon}</span>
               <span
                 style={{
                   fontFamily: "'IBM Plex Sans', system-ui, sans-serif",

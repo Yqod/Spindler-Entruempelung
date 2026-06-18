@@ -63,7 +63,7 @@ export function Hero9({
       </video>
       <div className="absolute inset-0 bg-black/20 dark:bg-black/40" />
 
-      <div className="relative z-10 min-h-screen flex flex-col justify-end items-center px-4 sm:px-6 lg:px-8 pb-8 sm:pb-12 lg:pb-16">
+      <div className="relative z-10 min-h-screen flex flex-col justify-center lg:justify-end items-center px-4 sm:px-6 lg:px-8 pb-0 lg:pb-16">
         <div className="flex flex-col items-center text-center gap-6">
 
           <h1
@@ -109,7 +109,7 @@ export function Hero9({
               {buttons.map(({ href, icon, imgSrc, sublabel, label, primary }, i) => {
                 const Icon = ICONS[icon];
                 const orangeStyle = {
-                  background: "#006FEF",
+                  background: "#007DF8",
                   boxShadow: "0 1px 2px rgba(0,0,0,0.12)",
                 };
                 return (

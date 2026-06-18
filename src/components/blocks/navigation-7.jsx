@@ -22,7 +22,7 @@ const glassCard = {
 };
 
 const orangeBtn = {
-  background: "#006FEF",
+  background: "#007DF8",
   boxShadow: "0 1px 2px rgba(0,0,0,0.12)",
 };
 
@@ -129,7 +129,7 @@ export function Navigation7({
                               style={{ borderLeft: "3px solid transparent" }}
                               onMouseEnter={e => {
                                 e.currentTarget.style.background = "rgba(255,255,255,0.06)";
-                                e.currentTarget.style.borderLeftColor = "#006FEF";
+                                e.currentTarget.style.borderLeftColor = "#007DF8";
                               }}
                               onMouseLeave={e => {
                                 e.currentTarget.style.background = "transparent";
@@ -237,7 +237,7 @@ export function Navigation7({
                                 <a key={idx} href={sub.href}
                                   onClick={() => { setIsMobileMenuOpen(false); setMobileExpandedItem(null); }}
                                   className="flex flex-col px-4 py-2.5 rounded-lg"
-                                  style={{ borderLeft: "3px solid #006FEF", background: "rgba(255,255,255,0.03)" }}>
+                                  style={{ borderLeft: "3px solid #007DF8", background: "rgba(255,255,255,0.03)" }}>
                                   <span className="text-sm font-medium" style={{ color: "#f3f1ec" }}>{sub.title}</span>
                                   <span className="text-xs mt-0.5" style={{ color: "rgba(243,241,236,0.5)" }}>{sub.description}</span>
                                 </a>

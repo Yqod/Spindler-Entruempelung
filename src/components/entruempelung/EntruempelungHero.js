@@ -3,7 +3,7 @@
 import { motion } from "motion/react";
 
 const orangeBtn = {
-  background: "#006FEF",
+  background: "#007DF8",
   boxShadow: "0 1px 2px rgba(0,0,0,0.12)",
 };
 
