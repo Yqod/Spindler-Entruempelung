@@ -4,7 +4,6 @@ import { motion } from "motion/react";
 
 const versprechen = [
   {
-    number: "1",
     title: "Festpreis garantiert",
     description:
       "Nach der kostenlosen Besichtigung erhalten Sie ein verbindliches Angebot. Was wir sagen, gilt – keine Nachforderungen.",
@@ -15,7 +14,6 @@ const versprechen = [
     ),
   },
   {
-    number: "2",
     title: "Schnell & pünktlich",
     description:
       "Wir halten Termine ein. Innerhalb von 24 Stunden Rückmeldung, meist innerhalb weniger Tage vor Ort.",
@@ -26,7 +24,6 @@ const versprechen = [
     ),
   },
   {
-    number: "3",
     title: "Diskret & respektvoll",
     description:
       "Ob Todesfall, Messie-Wohnung oder Zwangsräumung – wir gehen mit jeder Situation sensibel und ohne Wertung um.",
@@ -37,7 +34,6 @@ const versprechen = [
     ),
   },
   {
-    number: "4",
     title: "Vollständig & sauber",
     description:
       "Wir entrümpeln komplett – auf Wunsch inkl. Reinigung. Verwertbare Gegenstände werden angerechnet.",
@@ -86,12 +82,12 @@ export default function EntruempelungVersprechen() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
           {versprechen.map((item, index) => (
             <motion.div
-              key={item.number}
+              key={item.title}
               initial={{ opacity: 0, y: 32 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-40px" }}
               transition={{ duration: 0.5, delay: index * 0.1, ease: [0.4, 0, 0.2, 1] }}
-              className="flex flex-col gap-4 p-6 rounded-lg"
+              className="flex flex-col items-center text-center gap-4 p-6 rounded-lg"
               style={{
                 background: "#1d2128",
                 borderTop: "3px solid #007DF8",
@@ -99,8 +95,8 @@ export default function EntruempelungVersprechen() {
                 borderTopColor: "#007DF8",
               }}>
 
-              {/* Icon + Nummer */}
-              <div className="flex items-start justify-between">
+              {/* Icon */}
+              <div className="flex items-center justify-center">
                 <div
                   className="flex items-center justify-center w-12 h-12 rounded-full"
                   style={{
@@ -110,17 +106,6 @@ export default function EntruempelungVersprechen() {
                   }}>
                   {item.icon}
                 </div>
-                <span
-                  className="font-black"
-                  style={{
-                    fontFamily: "'Archivo', system-ui, sans-serif",
-                    fontSize: "2.5rem",
-                    letterSpacing: "-0.03em",
-                    lineHeight: 1,
-                    color: "rgba(243,241,236,0.06)",
-                  }}>
-                  {item.number}
-                </span>
               </div>
 
               <h3

@@ -4,7 +4,6 @@ import { motion } from "motion/react";
 
 const versprechen = [
   {
-    number: "1",
     title: "Einfühlsam & diskret",
     description:
       "Wir verstehen, dass eine Haushaltsauflösung oft mit schwierigen Situationen verbunden ist. Unser Team geht sensibel und ohne Druck vor.",
@@ -15,7 +14,6 @@ const versprechen = [
     ),
   },
   {
-    number: "2",
     title: "Wertanrechnung",
     description:
       "Verwertbare Gegenstände, Möbel und Antiquitäten werden professionell eingeschätzt und direkt vom Preis abgezogen.",
@@ -26,7 +24,6 @@ const versprechen = [
     ),
   },
   {
-    number: "3",
     title: "Keine Vorleistung",
     description:
       "Sie müssen nichts vorbereiten. Wir kommen, besichtigen, und übernehmen alles – von der Erstbesichtigung bis zur besenreinen Übergabe.",
@@ -37,7 +34,6 @@ const versprechen = [
     ),
   },
   {
-    number: "4",
     title: "Festpreis & transparent",
     description:
       "Nach der Besichtigung erhalten Sie ein vollständiges, verbindliches Angebot. Keine versteckten Kosten, kein Stress.",
@@ -93,12 +89,12 @@ export default function HaushaltsauflösungVersprechen() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
           {versprechen.map((item, index) => (
             <motion.div
-              key={item.number}
+              key={item.title}
               initial={{ opacity: 0, y: 32 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-40px" }}
               transition={{ duration: 0.5, delay: index * 0.1, ease: [0.4, 0, 0.2, 1] }}
-              className="flex flex-col gap-4 p-6 rounded-lg"
+              className="flex flex-col items-center text-center gap-4 p-6 rounded-lg"
               style={{
                 background: "#1d2128",
                 border: "1px solid rgba(255,255,255,0.06)",
@@ -106,7 +102,7 @@ export default function HaushaltsauflösungVersprechen() {
                 borderTopWidth: 3,
               }}>
 
-              <div className="flex items-start justify-between">
+              <div className="flex items-center justify-center">
                 <div
                   className="flex items-center justify-center w-12 h-12 rounded-full"
                   style={{
@@ -116,13 +112,6 @@ export default function HaushaltsauflösungVersprechen() {
                   }}>
                   {item.icon}
                 </div>
-                <span className="font-black" style={{
-                  fontFamily: "'Archivo', system-ui, sans-serif",
-                  fontSize: "2.5rem", letterSpacing: "-0.03em", lineHeight: 1,
-                  color: "rgba(243,241,236,0.06)",
-                }}>
-                  {item.number}
-                </span>
               </div>
 
               <h3 className="font-bold" style={{

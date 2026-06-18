@@ -7,56 +7,56 @@ const services = [
     title: "Nach einem Todesfall",
     description:
       "Wir gehen mit dem Nachlass eines Verstorbenen behutsam und respektvoll um. Persönliche Gegenstände werden nach Ihren Wünschen behandelt – nichts geht verloren ohne Ihre Zustimmung.",
-    image: "https://images.unsplash.com/photo-1484154218962-a197022b5858?w=900&q=80",
+    image: "/haushaltsaufloesung/haushaltsaufloesung-tod.png",
     span: "col-span-1 sm:col-span-2 md:col-span-3",
     aspect: "aspect-[3/1]",
   },
   {
     title: "Umzug ins Pflegeheim",
     description: "Wenn ein Angehöriger in eine Pflegeeinrichtung zieht, übernehmen wir die gesamte Wohnungsauflösung – schnell und ohne zusätzliche Last für die Familie.",
-    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&q=80",
+    image: "/haushaltsaufloesung/haushaltsaufloesung-umzug-pflegeheim.png",
     span: "col-span-1",
     aspect: "aspect-square",
   },
   {
     title: "Wertanrechnung",
     description: "Verwertbare Möbel, Antiquitäten und Gegenstände werden bewertet und vom Auftragspreis abgezogen. Sie profitieren direkt.",
-    image: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=700&q=80",
+    image: "/haushaltsaufloesung/haushaltsaufloesung-wertanrechnung.png",
     span: "col-span-1",
     aspect: "aspect-square",
   },
   {
     title: "Möbel & Inventar",
     description: "Schwere Möbel, Küchen, Elektrogeräte – wir demontieren, tragen aus und entsorgen oder verwerten alles fachgerecht.",
-    image: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=700&q=80",
+    image: "/haushaltsaufloesung/haushaltsaufloesung-moebel.png",
     span: "col-span-1",
     aspect: "aspect-square",
   },
   {
     title: "Wohnungsauflösung",
     description: "Komplette Auflösung bei Auszug, Zwangsräumung oder Eigentümerwechsel – besenrein und termingerecht übergeben.",
-    image: "https://images.unsplash.com/photo-1631679706909-1844bbd07221?w=900&q=80",
+    image: "/haushaltsaufloesung/haushaltsaufloesung-wohnung.png",
     span: "col-span-1 md:col-span-2",
     aspect: "aspect-[2/1]",
   },
   {
     title: "Nachlassverwaltung",
     description: "Wir unterstützen bei der Sichtung und Sortierung des Nachlasses – was bleibt, was geht, was gespendet wird.",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=700&q=80",
+    image: "/haushaltsaufloesung/haushaltsaufloesung-nachlass.png",
     span: "col-span-1",
     aspect: "aspect-square",
   },
   {
     title: "Besenreine Übergabe",
     description: "Nach der Auflösung reinigen wir die Räume auf Wunsch vollständig – bereit für Vermieter, Käufer oder Erben.",
-    image: "https://images.unsplash.com/photo-1558618047-3b34bfdb4bec?w=700&q=80",
+    image: "/haushaltsaufloesung/haushaltsaufloesung-besenrein.png",
     span: "col-span-1",
     aspect: "aspect-square",
   },
   {
     title: "Alles aus einer Hand",
     description: "Von der ersten Besichtigung bis zur Schlüsselübergabe – wir koordinieren alles, Sie müssen sich um nichts kümmern.",
-    image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=900&q=80",
+    image: "/haushaltsaufloesung/haushaltsaufloesung-alles.png",
     span: "col-span-1 md:col-span-2",
     aspect: "aspect-[2/1]",
   },
@@ -69,7 +69,7 @@ function ServiceCard({ service, index }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-40px" }}
       transition={{ duration: 0.5, delay: (index % 3) * 0.1, ease: [0.4, 0, 0.2, 1] }}
-      className={`relative overflow-hidden rounded-lg group ${service.span} ${service.aspect}`}
+      className={`relative overflow-hidden rounded-lg group ${service.span} aspect-[4/3] sm:${service.aspect}`}
       style={{ border: "1px solid rgba(255,255,255,0.07)" }}>
 
       <img
@@ -96,7 +96,7 @@ function ServiceCard({ service, index }) {
           {service.title}
         </h3>
         <p
-          className="transition-all duration-300 opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0"
+          className="transition-all duration-300 opacity-100 translate-y-0 sm:opacity-0 sm:translate-y-2 sm:group-hover:opacity-100 sm:group-hover:translate-y-0"
           style={{
             fontFamily: "'IBM Plex Sans', system-ui, sans-serif",
             fontSize: 14, lineHeight: 1.55,

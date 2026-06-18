@@ -5,7 +5,6 @@ import { motion, useInView, useScroll, useTransform } from "motion/react";
 
 const steps = [
   {
-    number: "1",
     title: "Kostenlose Anfrage",
     description:
       "Rufen Sie uns an oder schreiben Sie uns – wir melden uns innerhalb von 24 Stunden und besprechen Ihr Anliegen.",
@@ -16,7 +15,6 @@ const steps = [
     ),
   },
   {
-    number: "2",
     title: "Vor-Ort-Besichtigung",
     description:
       "Wir kommen zu Ihnen und schauen uns alles in Ruhe an. Sie erhalten sofort ein verbindliches Festpreisangebot – ohne versteckte Kosten.",
@@ -27,7 +25,6 @@ const steps = [
     ),
   },
   {
-    number: "3",
     title: "Professionelle Entrümpelung",
     description:
       "Unser Team räumt alles pünktlich und sorgfältig aus – inklusive fachgerechter Entsorgung. Sie müssen nichts weiter tun.",
@@ -63,19 +60,7 @@ function Step({ step, index }) {
           {step.icon}
         </div>
 
-        {/* Number */}
-        <span
-          className="font-black leading-none"
-          style={{
-            fontFamily: "'Archivo', system-ui, sans-serif",
-            fontSize: "clamp(3rem, 5vw, 4.5rem)",
-            letterSpacing: "-0.03em",
-            color: "rgba(243,241,236,0.08)",
-            marginTop: -8,
-            marginBottom: -12,
-          }}>
-          {step.number}
-        </span>
+        
 
         {/* Title */}
         <h3
@@ -173,7 +158,7 @@ export default function HomeProzess() {
           </div>
           {steps.map((step, index) => (
             <Step
-              key={step.number}
+              key={step.title}
               step={step}
               index={index}
             />

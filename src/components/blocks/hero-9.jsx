@@ -45,9 +45,11 @@ const ICONS = { google: GooglePlayIcon };
 export function Hero9({
   videoSrc = "https://videos.pexels.com/video-files/1409899/1409899-uhd_2560_1440_25fps.mp4",
   poster = "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920&q=80",
-  titleLine1 = "Explore the",
-  titleLine2 = "unknown",
+  eyebrow = "",
+  titleLine1 = "Entrümpelung &",
+  titleLine2 = "Sanierung",
   description = "",
+  tagline = "",
   buttons = [],
 }) {
   return (
@@ -61,89 +63,118 @@ export function Hero9({
         poster={poster}>
         <source src={videoSrc} type="video/mp4" />
       </video>
-      <div className="absolute inset-0 bg-black/20 dark:bg-black/40" />
+      {/* Verlauf statt flachem Overlay – mehr Tiefe, bessere Lesbarkeit unten */}
+      <div
+        className="absolute inset-0"
+        style={{
+          background:
+            "linear-gradient(to top, rgba(8,10,14,0.88) 0%, rgba(8,10,14,0.45) 38%, rgba(8,10,14,0.12) 70%, rgba(8,10,14,0.25) 100%)",
+        }}
+      />
 
-      <div className="relative z-10 min-h-screen flex flex-col justify-center lg:justify-end items-center px-4 sm:px-6 lg:px-8 pb-0 lg:pb-16">
-        <div className="flex flex-col items-center text-center gap-6">
+      <div className="relative z-10 min-h-screen flex items-end px-4 sm:px-6 lg:px-8 pb-12 sm:pb-20 lg:pb-24">
+        <div className="max-w-[1400px] mx-auto w-full">
+          <div className="max-w-4xl flex flex-col items-start text-left gap-5 sm:gap-6">
 
-          <h1
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black text-white"
-            style={{
-              fontFamily: "'Archivo', system-ui, sans-serif",
-              letterSpacing: "-0.02em",
-              lineHeight: 0.95,
-            }}>
-            <BlurText text={titleLine1} delay={0.1} />
-            <br />
-            <BlurText text={titleLine2} delay={0.5} />
-          </h1>
+            
 
-          {description && (
-            <motion.p
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.4 }}
-              className="flex items-center gap-2 text-base sm:text-lg text-white/90"
-              style={{ fontFamily: "'IBM Plex Sans', system-ui, sans-serif" }}>
-              <svg
-                className="w-[18px] h-[18px] shrink-0 opacity-90"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round">
-                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0Z" />
-                <circle cx="12" cy="10" r="3" />
-              </svg>
-              {description}
-            </motion.p>
-          )}
+            {/* Headline */}
+            <h1
+              className="text-[2rem] min-[420px]:text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black text-white"
+              style={{
+                fontFamily: "'Archivo', system-ui, sans-serif",
+                letterSpacing: "-0.03em",
+                lineHeight: 0.95,
+              }}>
+              <span className="block" style={{ fontWeight: 200 }}>
+                <BlurText text={titleLine1} delay={0.15} />
+              </span>
+              <span className="block" style={{ color: "#007DF8" }}>
+                <BlurText text={titleLine2} delay={0.5} />
+              </span>
+            </h1>
 
-          {buttons.length > 0 && (
-            <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.5 }}
-              className="flex flex-row flex-wrap justify-center gap-3">
-              {buttons.map(({ href, icon, imgSrc, sublabel, label, primary }, i) => {
-                const Icon = ICONS[icon];
-                const orangeStyle = {
-                  background: "#007DF8",
-                  boxShadow: "0 1px 2px rgba(0,0,0,0.12)",
-                };
-                return (
-                  <a
-                    key={i}
-                    href={href}
-                    className={primary
-                      ? "flex items-center justify-center gap-2 px-9 py-4 rounded-lg text-white text-base sm:text-lg transition-colors duration-200 hover:brightness-95 cursor-pointer"
-                      : "flex items-center justify-center gap-2 px-6 py-3 rounded-lg text-white text-sm transition-colors hover:bg-white/15 cursor-pointer"
-                    }
-                    style={primary
-                      ? { ...orangeStyle, fontFamily: "'Archivo', system-ui, sans-serif", fontWeight: 700 }
-                      : { background: "rgba(255,255,255,0.1)", backdropFilter: "blur(20px)", border: "1px solid rgba(255,255,255,0.2)", fontFamily: "'IBM Plex Sans', system-ui, sans-serif" }
-                    }>
-                    {imgSrc ? (
-                      <Image src={imgSrc} alt={label} width={96} height={32} className="h-8 w-auto object-contain" />
-                    ) : (
-                      <>
-                        {Icon && <Icon />}
-                        {!Icon && label}
-                        {Icon && (
-                          <div className="flex flex-col items-start">
-                            <span className="text-[10px] opacity-70 leading-none">{sublabel}</span>
-                            <span className="text-sm font-semibold leading-tight">{label}</span>
-                          </div>
-                        )}
-                      </>
-                    )}
-                  </a>
-                );
-              })}
-            </motion.div>
-          )}
+            {/* Info-Zeile: Standort + Tagline */}
+            {(description || tagline) && (
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.65 }}
+                className="flex flex-wrap items-center gap-x-4 gap-y-2 pt-1"
+                style={{ fontFamily: "'IBM Plex Sans', system-ui, sans-serif" }}>
+                {description && (
+                  <span className="flex items-center gap-2 text-base sm:text-lg text-white/90">
+                    <svg
+                      className="w-[18px] h-[18px] shrink-0"
+                      style={{ color: "#007DF8" }}
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round">
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0Z" />
+                      <circle cx="12" cy="10" r="3" />
+                    </svg>
+                    {description}
+                  </span>
+                )}
+                {description && tagline && (
+                  <span className="hidden sm:block h-4 w-px bg-white/25" />
+                )}
+                {tagline && (
+                  <span className="text-base sm:text-lg text-white/65">
+                    {tagline}
+                  </span>
+                )}
+              </motion.div>
+            )}
 
+            {buttons.length > 0 && (
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.75 }}
+                className="flex flex-row flex-wrap gap-3 pt-2">
+                {buttons.map(({ href, icon, imgSrc, sublabel, label, primary }, i) => {
+                  const Icon = ICONS[icon];
+                  const orangeStyle = {
+                    background: "#007DF8",
+                    boxShadow: "0 1px 2px rgba(0,0,0,0.12)",
+                  };
+                  return (
+                    <a
+                      key={i}
+                      href={href}
+                      className={primary
+                        ? "flex items-center justify-center gap-2 px-9 py-4 rounded-lg text-white text-base sm:text-lg transition-colors duration-200 hover:brightness-95 cursor-pointer"
+                        : "flex items-center justify-center gap-2 px-6 py-4 rounded-lg text-white text-base transition-colors hover:bg-white/15 cursor-pointer"
+                      }
+                      style={primary
+                        ? { ...orangeStyle, fontFamily: "'Archivo', system-ui, sans-serif", fontWeight: 700 }
+                        : { background: "rgba(255,255,255,0.1)", backdropFilter: "blur(20px)", border: "1px solid rgba(255,255,255,0.2)", fontFamily: "'IBM Plex Sans', system-ui, sans-serif" }
+                      }>
+                      {imgSrc ? (
+                        <Image src={imgSrc} alt={label} width={96} height={32} className="h-8 w-auto object-contain" />
+                      ) : (
+                        <>
+                          {Icon && <Icon />}
+                          {!Icon && label}
+                          {Icon && (
+                            <div className="flex flex-col items-start">
+                              <span className="text-[10px] opacity-70 leading-none">{sublabel}</span>
+                              <span className="text-sm font-semibold leading-tight">{label}</span>
+                            </div>
+                          )}
+                        </>
+                      )}
+                    </a>
+                  );
+                })}
+              </motion.div>
+            )}
+
+          </div>
         </div>
       </div>
     </section>

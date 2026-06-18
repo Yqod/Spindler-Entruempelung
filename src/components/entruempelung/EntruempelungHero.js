@@ -36,14 +36,14 @@ export default function EntruempelungHero() {
             transition={{ duration: 0.6, delay: 0.2 }}
             style={{
               fontFamily: "'Archivo', system-ui, sans-serif",
-              fontWeight: 900,
+              fontWeight: 200,
               fontSize: "clamp(2.2rem, 5.5vw, 4.5rem)",
               letterSpacing: "-0.02em",
               lineHeight: 1.04,
               color: "#f3f1ec",
             }}>
             Wir entrümpeln{" "}
-            <span >alles.</span>
+            <span style={{ color: "#007DF8", display: "block", fontWeight: 900 }}>alles.</span>
           </motion.h1>
 
           <motion.p

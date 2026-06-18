@@ -5,10 +5,11 @@ export default function HomeHero() {
     <Hero9
       videoSrc="/comparisonPictures/apartment_renovation_hero.mp4"
       poster="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920&q=80"
+      eyebrow="Ihr Partner in der Region"
       titleLine1="Entrümpelung und"
       titleLine2="Sanierung"
       description="Altmark und Umgebung"
-      
+      tagline="Schnell, diskret & zum Festpreis"
       buttons={[
         { href: "#kontakt", label: "Jetzt Anfragen", primary: true },
       ]}

@@ -75,7 +75,7 @@ function ServiceCard({ service, index }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-40px" }}
       transition={{ duration: 0.5, delay: (index % 3) * 0.1, ease: [0.4, 0, 0.2, 1] }}
-      className={`relative overflow-hidden rounded-lg group ${service.span} ${service.aspect}`}
+      className={`relative overflow-hidden rounded-lg group ${service.span} aspect-[4/3] sm:${service.aspect}`}
       style={{ border: "1px solid rgba(255,255,255,0.07)" }}>
 
       <img
@@ -102,7 +102,7 @@ function ServiceCard({ service, index }) {
           {service.title}
         </h3>
         <p
-          className="transition-all duration-300 opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0"
+          className="transition-all duration-300 opacity-100 translate-y-0 sm:opacity-0 sm:translate-y-2 sm:group-hover:opacity-100 sm:group-hover:translate-y-0"
           style={{
             fontFamily: "'IBM Plex Sans', system-ui, sans-serif",
             fontSize: 14,
