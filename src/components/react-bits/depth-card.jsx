@@ -272,7 +272,7 @@ const DepthCard = ({
           <h3
             className={cn(
               "text-2xl font-bold text-white mb-2 transform transition-all duration-500",
-              isHovered
+              isHovered || shouldDisableEffects
                 ? "translate-y-0 opacity-100"
                 : "translate-y-4 opacity-90"
             )}>
@@ -282,7 +282,7 @@ const DepthCard = ({
             <p
               className={cn(
                 "text-sm text-gray-200 transform transition-all duration-500 delay-75",
-                isHovered
+                isHovered || shouldDisableEffects
                   ? "translate-y-0 opacity-100"
                   : "translate-y-4 opacity-0"
               )}>

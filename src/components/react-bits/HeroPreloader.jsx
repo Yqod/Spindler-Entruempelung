@@ -1,13 +1,21 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import Preloader from "@/src/components/react-bits/preloader";
+
+// useLayoutEffect warnt beim Server-Rendering – dort auf useEffect zurückfallen.
+const useIsomorphicLayoutEffect =
+  typeof window !== "undefined" ? useLayoutEffect : useEffect;
 
 /**
  * Zeigt einen Vollbild-Ladebildschirm, während das übergebene Hero-Video
  * im Hintergrund in den Browser-Cache geladen wird. Sobald das Video
  * abspielbereit ist (oder das Sicherheits-Timeout greift), wird der Loader
  * ausgeblendet – das Hero-Video läuft dann sofort flüssig an.
+ *
+ * Wird die Seite über einen Anker-Link (z. B. "Über uns" → /#vertrauen oder
+ * "Kontakt" → #kontakt) angesteuert, wird der Preloader übersprungen und die
+ * Seite springt direkt zur Zielsektion.
  */
 export default function HeroPreloader({
   videoSrc,
@@ -17,8 +25,19 @@ export default function HeroPreloader({
   minDuration = 1500,
 }) {
   const [loading, setLoading] = useState(true);
+  const skipRef = useRef(false);
+
+  // Existiert beim Laden ein URL-Hash, kommt der Nutzer über einen Anker-Link
+  // (#vertrauen / #kontakt) – dann den Preloader gar nicht erst anzeigen.
+  useIsomorphicLayoutEffect(() => {
+    if (window.location.hash) {
+      skipRef.current = true;
+      setLoading(false);
+    }
+  }, []);
 
   useEffect(() => {
+    if (skipRef.current) return;
     let done = false;
     let ready = false;
     const startedAt = Date.now();
@@ -68,6 +87,11 @@ export default function HeroPreloader({
   const baseText = "Ihr Partner für";
   const loadingText = label ? `${baseText} ${label}.` : `${baseText}.`;
   const accentFromIndex = label ? baseText.split(" ").length : null;
+
+  // Beim Anker-Sprung den Preloader komplett überspringen.
+  if (skipRef.current) {
+    return <>{children}</>;
+  }
 
   return (
     <>
