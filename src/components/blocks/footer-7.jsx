@@ -18,7 +18,7 @@ export default function Footer7() {
           className="grid grid-cols-1 lg:grid-cols-[1.3fr_1fr_1fr] gap-10 lg:gap-8 text-center lg:text-left">
           <div className="flex flex-col items-center lg:items-start">
             <img
-              src="/assets/logoo.png"
+              src="/assets/log-neu1.png"
               alt="Altmark Sanierung und Räumung"
               className="h-14 sm:h-16 w-auto object-contain"
             />

@@ -89,7 +89,7 @@ export function Hero9({
                 lineHeight: 1.04,
                 color: "#f3f1ec",
               }}>
-              <span className="block" style={{ fontWeight: 200 }}>
+              <span className="block" style={{ fontWeight: 900 }}>
                 <BlurText text={titleLine1} delay={0.15} />
               </span>
               <span className="block" style={{ color: "#007DF8", fontWeight: 900 }}>

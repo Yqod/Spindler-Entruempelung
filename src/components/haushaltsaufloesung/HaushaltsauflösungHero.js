@@ -35,7 +35,7 @@ export default function HaushaltsauflösungHero() {
             transition={{ duration: 0.6, delay: 0.2 }}
             style={{
               fontFamily: "'Archivo', system-ui, sans-serif",
-              fontWeight: 200,
+              fontWeight: 900,
               fontSize: "clamp(2.2rem, 5.5vw, 4.5rem)",
               letterSpacing: "-0.02em",
               lineHeight: 1.04,

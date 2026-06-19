@@ -73,7 +73,7 @@ export function Navigation7({
 
           <Link href="/" className="flex items-center select-none shrink-0" aria-label="Startseite">
             <img
-              src="/assets/logoo.png"
+              src="/assets/log-neu1.png"
               alt="Altmark Sanierung und Räumung"
               className="h-10 sm:h-12 w-auto object-contain"
             />
@@ -184,7 +184,7 @@ export function Navigation7({
               style={{ borderBottom: "1px solid rgba(255,255,255,0.08)" }}>
               <Link href="/" onClick={() => { setIsMobileMenuOpen(false); setMobileExpandedItem(null); }} className="flex items-center">
                 <img
-                  src="/assets/logoo.png"
+                  src="/assets/log-neu1.png"
                   alt="Altmark Sanierung und Räumung"
                   className="h-12 w-auto object-contain"
                 />
